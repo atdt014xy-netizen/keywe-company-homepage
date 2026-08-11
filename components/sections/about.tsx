@@ -9,8 +9,6 @@ const stats = [
 export function About() {
   return (
     <section id="about" className="mx-auto max-w-[860px] px-5 py-20">
-      <h2 className="sr-only">회사 소개 — 숫자가 아니라 사람을 먼저 보는 상담</h2>
-
       <div className="relative -mx-5 aspect-[1672/941] w-auto overflow-hidden rounded-[8px] border border-border/60 shadow-lg shadow-primary/5 md:mx-0 md:w-full md:rounded-[18px]">
         <Image
           src="/images/menu1.png"
@@ -21,7 +19,30 @@ export function About() {
         />
       </div>
 
-      <dl className="mt-8 grid grid-cols-3 gap-4">
+      <div className="mx-auto mt-10 max-w-2xl">
+        <span className="text-sm font-semibold text-primary">회사 소개</span>
+        <h2 className="mt-3 text-balance font-heading text-3xl font-bold text-foreground sm:text-4xl">
+          숫자가 아니라, 사람을 먼저 보는 상담
+        </h2>
+        <p className="mt-5 leading-relaxed text-foreground/70">
+          Key We Company는 고객님의 상황을 먼저 이해하고, 그에 맞는 대출
+          방향을 함께 찾아가는 대출 상담·중개 전문 회사입니다. 단순히 한
+          가지 상품을 권하기보다 소득, 신용상태, 보유자산, 자금의 목적과
+          상환 계획 등을 종합적으로 살펴 고객님께 적합한 금융상품을
+          안내해 드립니다.
+        </p>
+        <p className="mt-4 leading-relaxed text-foreground/70">
+          주택담보대출, 전세자금, 사업자금, 차량담보 등 다양한 대출상품을
+          비교하여 복잡한 조건은 알기 쉽게 설명하고, 진행 과정과 필요한
+          서류도 차근차근 안내합니다. 무리한 대출을 권하지 않고, 정확하고
+          투명한 상담을 기본으로 하며 고객님의 선택을 가장 중요하게
+          생각합니다. Key We Company는 한 번의 상담으로 끝나는 곳이
+          아니라, 필요한 순간 편하게 다시 찾을 수 있는 믿음직한 금융
+          파트너가 되겠습니다.
+        </p>
+      </div>
+
+      <dl className="mx-auto mt-8 grid max-w-2xl grid-cols-3 gap-4">
         {stats.map((stat) => (
           <div
             key={stat.label}
