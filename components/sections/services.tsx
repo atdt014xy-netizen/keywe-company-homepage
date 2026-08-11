@@ -93,7 +93,7 @@ export function Services() {
           />
         </div>
 
-        <div className="mt-8 rounded-xl border border-border/60 bg-background p-5">
+        <div className="-mx-5 mt-8 rounded-xl border border-border/60 bg-background p-5 md:mx-0">
           <p className="text-sm leading-relaxed text-foreground/70">
             Key We Company는 직접 대출을 실행하지 않는 대부중개업체입니다.
             고객의 필요금액, 자금 목적, 직업·소득, 신용상태, 보유 담보 등을
@@ -103,7 +103,7 @@ export function Services() {
           </p>
         </div>
 
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="-mx-5 mt-8 grid gap-4 sm:grid-cols-2 md:mx-0 lg:grid-cols-3">
           {loanProducts.map((product, index) => (
             <div
               key={product.title}

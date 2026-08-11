@@ -42,7 +42,7 @@ export function Trust() {
           ))}
         </ul>
 
-        <blockquote className="mx-auto mt-8 max-w-xl rounded-xl bg-background p-6 shadow-sm">
+        <blockquote className="-mx-5 mt-8 rounded-xl bg-background p-6 shadow-sm md:mx-auto md:max-w-xl">
           <Quote className="size-6 text-primary/40" />
           <p className="mt-3 leading-relaxed text-foreground/80">
             &ldquo;복잡하게만 느껴지던 대출 상담을 제 상황에 맞게 차근차근

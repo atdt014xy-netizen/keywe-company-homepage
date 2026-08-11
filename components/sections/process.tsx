@@ -56,7 +56,7 @@ export function Process() {
         />
       </div>
 
-      <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="-mx-5 mt-10 grid gap-6 sm:grid-cols-2 md:mx-0 lg:grid-cols-3">
         {steps.map((step, index) => (
           <div key={step.title} className="relative rounded-xl bg-secondary/50 p-6">
             <span className="font-heading text-3xl font-bold text-primary/25">
