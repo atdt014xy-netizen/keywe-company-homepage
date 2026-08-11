@@ -37,7 +37,7 @@ export function Process() {
         </p>
       </div>
 
-      <div className="relative mt-10 aspect-21/9 w-full overflow-hidden rounded-4xl border border-border/60 shadow-lg shadow-primary/5">
+      <div className="relative -mx-5 mt-10 aspect-21/9 w-auto overflow-hidden rounded-lg border border-border/60 shadow-lg shadow-primary/5 md:mx-0 md:w-full md:rounded-4xl">
         <Image
           src="/images/process.png"
           alt="빌딩 사이로 해가 떠오르는 도심 거리로 표현한 재무 설계 여정"

@@ -11,7 +11,7 @@ export function About() {
     <section id="about" className="mx-auto max-w-6xl px-5 py-20">
       <div className="grid items-center gap-12 md:grid-cols-2">
         <div className="relative order-2 md:order-1">
-          <div className="relative aspect-4/3 overflow-hidden rounded-4xl border border-border/60 shadow-lg shadow-primary/5">
+          <div className="relative -mx-5 aspect-4/3 overflow-hidden rounded-lg border border-border/60 shadow-lg shadow-primary/5 md:mx-0 md:rounded-4xl">
             <Image
               src="/images/about.png"
               alt="재무 상담사가 성장 그래프와 서류로 고객에게 브리핑하는 모습"

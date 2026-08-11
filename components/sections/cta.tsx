@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 export function Cta() {
   return (
     <section id="cta" className="mx-auto max-w-6xl px-5 py-20">
-      <div className="relative overflow-hidden rounded-4xl border border-border/60 shadow-xl shadow-primary/10">
+      <div className="relative -mx-5 overflow-hidden rounded-lg border border-border/60 shadow-xl shadow-primary/10 md:mx-0 md:rounded-4xl">
         <Image
           src="/images/cta.png"
           alt="저녁 노을빛 아래 열려있는 Key We Company 상담 공간의 문"
