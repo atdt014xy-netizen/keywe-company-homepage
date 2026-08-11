@@ -56,9 +56,9 @@ export function Services() {
             {services.map((service) => (
               <div
                 key={service.title}
-                className="rounded-3xl border border-border/60 bg-card p-6 shadow-sm transition-shadow hover:shadow-md"
+                className="rounded-xl border border-border/60 bg-card p-6 shadow-sm transition-shadow hover:shadow-md"
               >
-                <div className="flex size-11 items-center justify-center rounded-2xl bg-secondary text-primary">
+                <div className="flex size-11 items-center justify-center rounded-lg bg-secondary text-primary">
                   <service.icon className="size-5" strokeWidth={1.75} />
                 </div>
                 <h3 className="mt-4 font-heading text-lg font-bold text-foreground">

@@ -40,7 +40,7 @@ export function About() {
             {stats.map((stat) => (
               <div
                 key={stat.label}
-                className="rounded-2xl bg-secondary/60 px-3 py-4 text-center"
+                className="rounded-lg bg-secondary/60 px-3 py-4 text-center"
               >
                 <dt className="sr-only">{stat.label}</dt>
                 <dd className="font-heading text-xl font-bold text-primary sm:text-2xl">

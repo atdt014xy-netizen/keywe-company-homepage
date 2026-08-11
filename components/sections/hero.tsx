@@ -23,7 +23,7 @@ export function Hero() {
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <a
             href="#cta"
-            className={cn(buttonVariants({ size: "lg" }), "gap-1.5 rounded-full px-6")}
+            className={cn(buttonVariants({ size: "lg" }), "gap-1.5 px-6")}
           >
             무료 상담 신청하기
             <ArrowRight className="size-4" />
@@ -32,7 +32,7 @@ export function Hero() {
             href="#services"
             className={cn(
               buttonVariants({ variant: "outline", size: "lg" }),
-              "rounded-full px-6"
+              "px-6"
             )}
           >
             서비스 살펴보기

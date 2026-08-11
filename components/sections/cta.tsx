@@ -29,7 +29,7 @@ export function Cta() {
               href="tel:1588-0000"
               className={cn(
                 buttonVariants({ size: "lg" }),
-                "gap-1.5 rounded-full bg-white px-6 text-primary hover:bg-white/90"
+                "gap-1.5 bg-white px-6 text-primary hover:bg-white/90"
               )}
             >
               <Phone className="size-4" />
@@ -39,7 +39,7 @@ export function Cta() {
               href="mailto:hello@keywe.co.kr"
               className={cn(
                 buttonVariants({ variant: "outline", size: "lg" }),
-                "gap-1.5 rounded-full border-white/50 bg-white/10 px-6 text-white hover:bg-white/20"
+                "gap-1.5 border-white/50 bg-white/10 px-6 text-white hover:bg-white/20"
               )}
             >
               <Mail className="size-4" />

@@ -37,10 +37,10 @@ export function Process() {
         </p>
       </div>
 
-      <div className="relative -mx-5 mt-10 aspect-21/9 w-auto overflow-hidden rounded-[8px] border border-border/60 shadow-lg shadow-primary/5 md:mx-0 md:w-full md:rounded-[18px]">
+      <div className="relative -mx-5 mt-10 aspect-4/3 w-auto overflow-hidden rounded-[8px] border border-border/60 shadow-lg shadow-primary/5 md:mx-0 md:w-full md:rounded-[18px]">
         <Image
           src="/images/process.png"
-          alt="빌딩 사이로 해가 떠오르는 도심 거리로 표현한 재무 설계 여정"
+          alt="Key We Company 로고와 '신뢰할 수 있는 금융 파트너' 문구, 도심 거리의 빌딩 세로 간판"
           fill
           className="object-cover"
           sizes="100vw"
@@ -49,7 +49,7 @@ export function Process() {
 
       <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {steps.map((step, index) => (
-          <div key={step.title} className="relative rounded-3xl bg-secondary/50 p-6">
+          <div key={step.title} className="relative rounded-xl bg-secondary/50 p-6">
             <span className="font-heading text-3xl font-bold text-primary/25">
               {String(index + 1).padStart(2, "0")}
             </span>

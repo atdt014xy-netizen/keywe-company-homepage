@@ -46,7 +46,7 @@ export function Trust() {
             ))}
           </ul>
 
-          <blockquote className="mt-8 rounded-3xl bg-background p-6 shadow-sm">
+          <blockquote className="mt-8 rounded-xl bg-background p-6 shadow-sm">
             <Quote className="size-6 text-primary/40" />
             <p className="mt-3 leading-relaxed text-foreground/80">
               &ldquo;복잡하게만 느껴지던 재무 설계를 제 상황에 맞게 차근차근
