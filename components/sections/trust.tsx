@@ -11,7 +11,7 @@ export function Trust() {
   return (
     <section id="trust" className="bg-secondary/40 py-20">
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 md:grid-cols-2">
-        <div className="relative -mx-5 aspect-4/5 overflow-hidden rounded-lg border border-border/60 shadow-lg shadow-primary/5 md:mx-0 md:rounded-4xl">
+        <div className="relative -mx-5 aspect-4/5 overflow-hidden rounded-[8px] border border-border/60 shadow-lg shadow-primary/5 md:mx-0 md:rounded-[18px]">
           <Image
             src="/images/trust.png"
             alt="도시 스카이라인 속에서 따뜻하게 빛나는 빌딩과 신뢰를 상징하는 동전"

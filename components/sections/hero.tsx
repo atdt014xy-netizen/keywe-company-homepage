@@ -9,7 +9,7 @@ export function Hero() {
     <section id="top" className="relative overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-secondary/70 via-background to-background" />
       <div className="mx-auto max-w-6xl px-5 pt-16 pb-8 md:pt-24">
-        <div className="relative -mx-5 aspect-16/9 w-auto overflow-hidden rounded-lg border border-border/60 shadow-xl shadow-primary/10 md:mx-0 md:w-full md:rounded-4xl">
+        <div className="relative -mx-5 aspect-16/9 w-auto overflow-hidden rounded-[8px] border border-border/60 shadow-xl shadow-primary/10 md:mx-0 md:w-full md:rounded-[18px]">
           <Image
             src="/images/hero.png"
             alt="Key We Company 로고와 '신뢰를 바탕으로 한 맞춤 금융 상담' 문구, 도심 빌딩가에 위치한 사무실"

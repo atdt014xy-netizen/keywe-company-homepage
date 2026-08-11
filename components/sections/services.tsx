@@ -41,7 +41,7 @@ export function Services() {
               함께 방향을 찾아드립니다.
             </p>
 
-            <div className="relative mt-8 hidden aspect-4/3 overflow-hidden rounded-4xl border border-border/60 shadow-lg shadow-primary/5 md:block">
+            <div className="relative mt-8 hidden aspect-4/3 overflow-hidden rounded-[18px] border border-border/60 shadow-lg shadow-primary/5 md:block">
               <Image
                 src="/images/services.png"
                 alt="도심 사무실에서 차량 키와 현금을 주고받으며 대부중개 상담을 진행하는 모습"
