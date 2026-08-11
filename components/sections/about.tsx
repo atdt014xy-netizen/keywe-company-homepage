@@ -14,7 +14,7 @@ export function About() {
           <div className="relative aspect-4/3 overflow-hidden rounded-4xl border border-border/60 shadow-lg shadow-primary/5">
             <Image
               src="/images/about.png"
-              alt="따뜻한 햇살이 드는 Key We Company 사무실 내부"
+              alt="재무 상담사가 성장 그래프와 서류로 고객에게 브리핑하는 모습"
               fill
               className="object-cover"
               sizes="(min-width: 768px) 50vw, 100vw"

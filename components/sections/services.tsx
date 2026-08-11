@@ -44,7 +44,7 @@ export function Services() {
             <div className="relative mt-8 hidden aspect-3/2 overflow-hidden rounded-4xl border border-border/60 shadow-lg shadow-primary/5 md:block">
               <Image
                 src="/images/services.png"
-                alt="숲속 오두막과 성장하는 나무로 표현한 Key We Company 서비스"
+                alt="자동차와 현금을 두고 금융중개 상담을 진행하는 모습"
                 fill
                 className="object-cover"
                 sizes="50vw"
