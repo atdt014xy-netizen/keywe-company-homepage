@@ -12,7 +12,7 @@ export function SiteFooter() {
         }}
       />
 
-      <div className="mx-auto max-w-6xl px-5 py-12">
+      <div className="mx-auto max-w-[860px] px-5 py-12">
         <div className="flex flex-col items-start justify-between gap-8 sm:flex-row">
           <div>
             <div className="flex items-center gap-2">

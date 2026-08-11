@@ -26,7 +26,7 @@ const steps = [
 
 export function Process() {
   return (
-    <section id="process" className="mx-auto max-w-6xl px-5 py-20">
+    <section id="process" className="mx-auto max-w-[860px] px-5 py-20">
       <div className="mx-auto max-w-2xl text-center">
         <span className="text-sm font-semibold text-primary">상담 절차</span>
         <h2 className="mt-3 text-balance font-heading text-3xl font-bold text-foreground sm:text-4xl">

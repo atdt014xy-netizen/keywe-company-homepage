@@ -10,7 +10,7 @@ const badges = [
 export function Trust() {
   return (
     <section id="trust" className="bg-secondary/40 py-20">
-      <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 md:grid-cols-2">
+      <div className="mx-auto grid max-w-[860px] items-center gap-12 px-5 md:grid-cols-2">
         <div className="relative -mx-5 aspect-4/5 overflow-hidden rounded-[8px] border border-border/60 shadow-lg shadow-primary/5 md:mx-0 md:rounded-[18px]">
           <Image
             src="/images/trust.png"

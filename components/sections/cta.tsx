@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 
 export function Cta() {
   return (
-    <section id="cta" className="mx-auto max-w-6xl px-5 py-20">
+    <section id="cta" className="mx-auto max-w-[860px] px-5 py-20">
       <div className="relative -mx-5 overflow-hidden rounded-[8px] border border-border/60 shadow-xl shadow-primary/10 md:mx-0 md:rounded-[18px]">
         <Image
           src="/images/cta.png"

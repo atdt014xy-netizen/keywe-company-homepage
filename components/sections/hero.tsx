@@ -9,7 +9,7 @@ export function Hero() {
   return (
     <section id="top" className="relative overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-secondary/70 via-background to-background" />
-      <div className="mx-auto max-w-6xl px-5 pt-16 pb-8 md:pt-24">
+      <div className="mx-auto max-w-[860px] px-5 pt-16 pb-8 md:pt-24">
         <BorderBeamPanel
           beams={2}
           colors={["#8bc34a", "#1e5631"]}
@@ -59,7 +59,7 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-6xl px-5 pb-4">
+      <div className="mx-auto max-w-[860px] px-5 pb-4">
         <OrbitingCirclesGlobe />
       </div>
     </section>

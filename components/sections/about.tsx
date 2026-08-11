@@ -8,7 +8,7 @@ const stats = [
 
 export function About() {
   return (
-    <section id="about" className="mx-auto max-w-6xl px-5 py-20">
+    <section id="about" className="mx-auto max-w-[860px] px-5 py-20">
       <div className="grid items-center gap-12 md:grid-cols-2">
         <div className="relative order-2 md:order-1">
           <div className="relative -mx-5 aspect-4/3 overflow-hidden rounded-[8px] border border-border/60 shadow-lg shadow-primary/5 md:mx-0 md:rounded-[18px]">

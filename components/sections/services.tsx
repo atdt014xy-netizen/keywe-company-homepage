@@ -27,7 +27,7 @@ const services = [
 export function Services() {
   return (
     <section id="services" className="bg-secondary/40 py-20">
-      <div className="mx-auto max-w-6xl px-5">
+      <div className="mx-auto max-w-[860px] px-5">
         <div className="grid items-center gap-12 md:grid-cols-2">
           <div>
             <span className="text-sm font-semibold text-primary">서비스 소개</span>
