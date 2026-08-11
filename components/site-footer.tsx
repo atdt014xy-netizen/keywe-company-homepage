@@ -22,7 +22,8 @@ export function SiteFooter() {
               </span>
             </div>
             <p className="mt-3 max-w-xs text-sm leading-relaxed text-foreground/60">
-              당신의 평생 자산 여정에 함께하는 재무 상담 파트너
+              등록 대부업체와 고객님을 연결해드리는 대부중개업체입니다.
+              고객에게 별도의 중개수수료를 요구하지 않습니다.
             </p>
           </div>
 

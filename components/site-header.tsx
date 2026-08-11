@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 
 const navLinks = [
   { href: "#about", label: "회사 소개" },
-  { href: "#services", label: "서비스" },
+  { href: "#services", label: "대출상품" },
   { href: "#process", label: "상담 절차" },
   { href: "#trust", label: "고객 신뢰" },
 ];

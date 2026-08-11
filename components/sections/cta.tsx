@@ -18,10 +18,10 @@ export function Cta() {
 
         <div className="relative flex flex-col items-center gap-6 px-6 py-20 text-center sm:px-10">
           <h2 className="max-w-xl text-balance font-heading text-3xl font-bold text-white sm:text-4xl">
-            지금, 마음 편한 재무 상담을 시작하세요
+            지금, 마음 편한 대출 상담을 시작하세요
           </h2>
           <p className="max-w-lg text-white/85">
-            첫 상담은 무료입니다. 편하신 방법으로 언제든 문을 두드려 주세요.
+            상담은 무료이며, 고객님께 별도의 중개수수료를 요구하지 않습니다.
           </p>
 
           <div className="mt-2 flex flex-wrap items-center justify-center gap-3">

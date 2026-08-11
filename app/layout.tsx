@@ -15,9 +15,9 @@ const gowunBatang = Gowun_Batang({
 });
 
 export const metadata: Metadata = {
-  title: "Key We Company | 믿을 수 있는 재무 상담",
+  title: "Key We Company | 믿을 수 있는 대부중개",
   description:
-    "Key We Company는 따뜻하고 신뢰할 수 있는 재무·금융 상담으로 고객의 평생 자산 여정에 함께합니다.",
+    "Key We Company는 등록 대부업체와 고객님을 연결해드리는 대부중개업체입니다. 부동산·자동차 담보대출부터 개인신용, 사업자·법인자금까지 상황에 맞는 대출상품을 안내합니다.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

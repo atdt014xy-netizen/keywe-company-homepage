@@ -1,26 +1,43 @@
 import Image from "next/image";
-import { CalendarCheck, Stethoscope, FileText, HeartHandshake } from "lucide-react";
+import {
+  PhoneCall,
+  MessagesSquare,
+  FileSearch,
+  Search,
+  ClipboardCheck,
+  CheckCircle2,
+} from "lucide-react";
 
 const steps = [
   {
-    icon: CalendarCheck,
+    icon: PhoneCall,
     title: "상담 신청",
-    description: "홈페이지 또는 전화로 편하신 시간에 상담을 예약합니다.",
+    description: "전화·카카오톡·홈페이지 등으로 간편하게 상담을 신청합니다.",
   },
   {
-    icon: Stethoscope,
-    title: "초기 재무 진단",
-    description: "현재 자산과 목표를 함께 살펴보며 상황을 진단합니다.",
+    icon: MessagesSquare,
+    title: "상담 진행",
+    description: "전문 상담사가 고객님의 상황에 맞는 대출상품을 안내합니다.",
   },
   {
-    icon: FileText,
-    title: "맞춤 설계 제안",
-    description: "고객님만을 위한 재무 설계안을 알기 쉽게 안내합니다.",
+    icon: FileSearch,
+    title: "서류 안내 및 준비",
+    description: "대출 심사에 필요한 서류를 안내하고 준비를 도와드립니다.",
   },
   {
-    icon: HeartHandshake,
-    title: "지속적인 사후 관리",
-    description: "설계 이후에도 정기적으로 점검하며 함께 걸어갑니다.",
+    icon: Search,
+    title: "심사 진행",
+    description: "제휴 대부업체에서 대출 가능 여부와 조건을 심사합니다.",
+  },
+  {
+    icon: ClipboardCheck,
+    title: "심사 결과 안내",
+    description: "심사 결과와 한도·금리 등 대출 조건을 상세히 안내합니다.",
+  },
+  {
+    icon: CheckCircle2,
+    title: "대출 실행",
+    description: "고객님이 조건에 동의하면 제휴 대부업체가 대출을 실행합니다.",
   },
 ];
 
@@ -30,24 +47,25 @@ export function Process() {
       <div className="mx-auto max-w-2xl text-center">
         <span className="text-sm font-semibold text-primary">상담 절차</span>
         <h2 className="mt-3 text-balance font-heading text-3xl font-bold text-foreground sm:text-4xl">
-          네 걸음이면 충분합니다
+          여섯 단계로 진행됩니다
         </h2>
         <p className="mt-4 leading-relaxed text-foreground/70">
-          첫 상담부터 이후 관리까지, Key We Company가 함께 걸어가는 여정입니다.
+          상담부터 대출 실행까지, Key We Company는 제휴 대부업체와 고객님을
+          잇는 중개 역할을 합니다.
         </p>
       </div>
 
-      <div className="relative -mx-5 mt-10 aspect-4/3 w-auto overflow-hidden rounded-[8px] border border-border/60 shadow-lg shadow-primary/5 md:mx-0 md:w-full md:rounded-[18px]">
+      <div className="relative -mx-5 mt-10 aspect-[1645/956] w-auto overflow-hidden rounded-[8px] border border-border/60 shadow-lg shadow-primary/5 md:mx-0 md:w-full md:rounded-[18px]">
         <Image
-          src="/images/process.png"
-          alt="Key We Company 로고와 '신뢰할 수 있는 금융 파트너' 문구, 도심 거리의 빌딩 세로 간판"
+          src="/images/hero3.png"
+          alt="대출 진행 순서 6단계: 상담 신청, 상담 진행, 서류 안내 및 준비, 심사 진행, 심사 결과 안내, 대출 실행"
           fill
           className="object-cover"
           sizes="100vw"
         />
       </div>
 
-      <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {steps.map((step, index) => (
           <div key={step.title} className="relative rounded-xl bg-secondary/50 p-6">
             <span className="font-heading text-3xl font-bold text-primary/25">

@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 const stats = [
-  { value: "15년+", label: "재무 상담 경력" },
+  { value: "15년+", label: "대출 상담 경력" },
   { value: "1,200+", label: "누적 상담 고객" },
   { value: "4.9/5", label: "고객 만족도" },
 ];
@@ -14,7 +14,7 @@ export function About() {
           <div className="relative -mx-5 aspect-4/3 overflow-hidden rounded-[8px] border border-border/60 shadow-lg shadow-primary/5 md:mx-0 md:rounded-[18px]">
             <Image
               src="/images/about.png"
-              alt="재무 상담사가 성장 그래프와 서류로 고객에게 브리핑하는 모습"
+              alt="대부중개 상담사가 서류와 그래프로 고객에게 대출상품을 브리핑하는 모습"
               fill
               className="object-cover"
               sizes="(min-width: 768px) 50vw, 100vw"
@@ -30,10 +30,11 @@ export function About() {
             사람을 먼저 보는 상담
           </h2>
           <p className="mt-5 leading-relaxed text-foreground/70">
-            Key We Company는 정형화된 상품 추천이 아닌, 고객님 한 분 한 분의
-            삶의 목표와 속도에 맞춘 재무 설계를 제안합니다. 복잡한 금융
-            용어 대신 이해하기 쉬운 설명으로, 편안한 마음으로 상담받으실 수
-            있도록 함께합니다.
+            Key We Company는 직접 돈을 빌려주는 대부업체가 아닌, 등록된
+            대부업체를 연결해드리는 대부중개업체입니다. 고객님의 자금
+            목적과 소득, 신용상태, 담보현황을 확인해 적합한 대출상품을
+            찾고, 취급업체와의 심사·계약 과정을 이해하기 쉽게 안내해
+            드립니다.
           </p>
 
           <dl className="mt-8 grid grid-cols-3 gap-4">

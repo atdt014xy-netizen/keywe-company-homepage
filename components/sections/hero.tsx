@@ -44,7 +44,7 @@ export function Hero() {
               "px-6"
             )}
           >
-            서비스 살펴보기
+            대출상품 살펴보기
           </a>
         </div>
 
