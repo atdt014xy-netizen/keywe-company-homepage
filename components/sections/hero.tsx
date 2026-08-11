@@ -48,7 +48,7 @@ export function Hero() {
           </a>
         </div>
 
-        <div className="relative mx-auto mt-8 aspect-2/3 w-full max-w-[860px] overflow-hidden rounded-[8px] border border-border/60 shadow-lg shadow-primary/5 md:rounded-[18px]">
+        <div className="relative mx-auto mt-8 aspect-[860/1499] w-full max-w-[860px] overflow-hidden rounded-[8px] border border-border/60 shadow-lg shadow-primary/5 md:rounded-[18px]">
           <Image
             src="/images/hero2.png"
             alt="Key We Company 알선 가능한 주요 대출 상품 8종, 상담 진행 절차, 안내 사항"
