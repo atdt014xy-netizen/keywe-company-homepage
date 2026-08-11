@@ -6,17 +6,17 @@ import { cn } from "@/lib/utils";
 export function Cta() {
   return (
     <section id="cta" className="mx-auto max-w-[860px] px-5 py-20">
-      <div className="relative -mx-5 overflow-hidden rounded-[8px] border border-border/60 shadow-xl shadow-primary/10 md:mx-0 md:rounded-[18px]">
+      <div className="relative -mx-5 aspect-square w-auto overflow-hidden rounded-[8px] border border-border/60 shadow-xl shadow-primary/10 md:mx-0 md:w-full md:rounded-[18px]">
         <Image
           src="/images/foot.png"
-          alt="창밖으로 도시가 보이는 사무실에서 상담사가 고객과 마주 앉아 상담하는 모습"
+          alt="자산 상담 도구와 함께 상담사가 고객과 마주 앉아 상담하는 모습"
           fill
           className="object-cover"
-          sizes="100vw"
+          sizes="(min-width: 860px) 860px, 100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10" />
 
-        <div className="relative flex flex-col items-center gap-6 px-6 py-20 text-center sm:px-10">
+        <div className="absolute inset-0 flex flex-col items-center justify-center gap-6 px-6 text-center sm:px-10">
           <h2 className="max-w-xl text-balance font-heading text-3xl font-bold text-white sm:text-4xl">
             지금, 마음 편한 대출 상담을 시작하세요
           </h2>
