@@ -51,7 +51,7 @@ export function Hero() {
           <div className="relative aspect-16/9 overflow-hidden rounded-4xl border border-border/60 shadow-xl shadow-primary/10">
             <Image
               src="/images/hero.png"
-              alt="차량이 나란히 주차된 Key We Company 재무 상담 사무실 전경"
+              alt="도심 빌딩가에 위치한 Key We Company 사무실과 앞에 주차된 차량"
               fill
               priority
               className="object-cover"

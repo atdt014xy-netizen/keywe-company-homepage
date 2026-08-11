@@ -40,7 +40,7 @@ export function Process() {
       <div className="relative mt-10 aspect-21/9 w-full overflow-hidden rounded-4xl border border-border/60 shadow-lg shadow-primary/5">
         <Image
           src="/images/process.png"
-          alt="단계적으로 이어지는 재무 설계 여정을 표현한 마을 길"
+          alt="빌딩 사이로 해가 떠오르는 도심 거리로 표현한 재무 설계 여정"
           fill
           className="object-cover"
           sizes="100vw"

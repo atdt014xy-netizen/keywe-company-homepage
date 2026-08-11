@@ -14,7 +14,7 @@ export function Trust() {
         <div className="relative aspect-4/5 overflow-hidden rounded-4xl border border-border/60 shadow-lg shadow-primary/5">
           <Image
             src="/images/trust.png"
-            alt="따뜻한 빛이 감싸는 작은 집으로 표현한 신뢰와 안전"
+            alt="도시 스카이라인 속에서 따뜻하게 빛나는 빌딩과 신뢰를 상징하는 동전"
             fill
             className="object-cover"
             sizes="(min-width: 768px) 50vw, 100vw"
