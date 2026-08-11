@@ -8,8 +8,8 @@ export function Cta() {
     <section id="cta" className="mx-auto max-w-[860px] px-5 py-20">
       <div className="relative -mx-5 overflow-hidden rounded-[8px] border border-border/60 shadow-xl shadow-primary/10 md:mx-0 md:rounded-[18px]">
         <Image
-          src="/images/cta.png"
-          alt="저녁 노을빛 아래 열려있는 Key We Company 상담 공간의 문"
+          src="/images/foot.png"
+          alt="창밖으로 도시가 보이는 사무실에서 상담사가 고객과 마주 앉아 상담하는 모습"
           fill
           className="object-cover"
           sizes="100vw"
