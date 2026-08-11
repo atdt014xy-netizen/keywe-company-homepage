@@ -44,24 +44,15 @@ const steps = [
 export function Process() {
   return (
     <section id="process" className="mx-auto max-w-[860px] px-5 py-20">
-      <div className="mx-auto max-w-2xl text-center">
-        <span className="text-sm font-semibold text-primary">상담 절차</span>
-        <h2 className="mt-3 text-balance font-heading text-3xl font-bold text-foreground sm:text-4xl">
-          여섯 단계로 진행됩니다
-        </h2>
-        <p className="mt-4 leading-relaxed text-foreground/70">
-          상담부터 대출 실행까지, Key We Company는 제휴 대부업체와 고객님을
-          잇는 중개 역할을 합니다.
-        </p>
-      </div>
+      <h2 className="sr-only">상담 절차 — 여섯 단계로 진행됩니다</h2>
 
-      <div className="relative -mx-5 mt-10 aspect-[1645/956] w-auto overflow-hidden rounded-[8px] border border-border/60 shadow-lg shadow-primary/5 md:mx-0 md:w-full md:rounded-[18px]">
+      <div className="relative -mx-5 aspect-[1672/941] w-auto overflow-hidden rounded-[8px] border border-border/60 shadow-lg shadow-primary/5 md:mx-0 md:w-full md:rounded-[18px]">
         <Image
-          src="/images/hero3.png"
-          alt="대출 진행 순서 6단계: 상담 신청, 상담 진행, 서류 안내 및 준비, 심사 진행, 심사 결과 안내, 대출 실행"
+          src="/images/menu3.png"
+          alt="상담 절차 — 여섯 단계로 진행됩니다, 상담사가 고객에게 절차를 안내하는 모습"
           fill
           className="object-cover"
-          sizes="100vw"
+          sizes="(min-width: 860px) 860px, 100vw"
         />
       </div>
 

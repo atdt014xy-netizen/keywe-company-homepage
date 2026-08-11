@@ -81,42 +81,29 @@ export function Services() {
   return (
     <section id="services" className="bg-secondary/40 py-20">
       <div className="mx-auto max-w-[860px] px-5">
-        <div className="grid items-center gap-12 md:grid-cols-2">
-          <div>
-            <span className="text-sm font-semibold text-primary">대출상품 안내</span>
-            <h2 className="mt-3 text-balance font-heading text-3xl font-bold text-foreground sm:text-4xl">
-              고객님 상황에 맞는
-              <br />
-              12가지 대출상품
-            </h2>
-            <p className="mt-5 leading-relaxed text-foreground/70">
-              Key We Company는 직접 대출을 실행하지 않습니다. 고객님의 상황을
-              상담한 뒤, 조건에 맞는 상품을 취급하는 등록 대부업체와
-              연결해드리는 대부중개업체입니다.
-            </p>
+        <h2 className="sr-only">대출상품 안내 — 고객님 상황에 맞는 12가지 대출상품</h2>
 
-            <div className="relative mt-8 hidden aspect-4/3 overflow-hidden rounded-[8px] border border-border/60 shadow-lg shadow-primary/5 md:block">
-              <Image
-                src="/images/services.png"
-                alt="도심 사무실에서 차량 키와 현금을 주고받으며 대부중개 상담을 진행하는 모습"
-                fill
-                className="object-cover"
-                sizes="50vw"
-              />
-            </div>
-          </div>
-
-          <div className="rounded-xl border border-border/60 bg-background p-5">
-            <p className="text-sm leading-relaxed text-foreground/70">
-              고객의 필요금액, 자금 목적, 직업·소득, 신용상태, 보유 담보 등을
-              확인해 적합한 대출 종류를 함께 찾아드립니다. 실제 대출 가능
-              여부와 한도·금리·기간은 심사를 진행하는 제휴 대부업체의
-              기준에 따라 달라집니다.
-            </p>
-          </div>
+        <div className="relative -mx-5 aspect-[1672/941] w-auto overflow-hidden rounded-[8px] border border-border/60 shadow-lg shadow-primary/5 md:mx-0 md:w-full md:rounded-[18px]">
+          <Image
+            src="/images/menu2.png"
+            alt="대출상품 안내 — 고객님 상황에 맞는 12가지 대출상품, 상담사가 보드로 상품을 안내하는 모습"
+            fill
+            className="object-cover"
+            sizes="(min-width: 860px) 860px, 100vw"
+          />
         </div>
 
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 rounded-xl border border-border/60 bg-background p-5">
+          <p className="text-sm leading-relaxed text-foreground/70">
+            Key We Company는 직접 대출을 실행하지 않는 대부중개업체입니다.
+            고객의 필요금액, 자금 목적, 직업·소득, 신용상태, 보유 담보 등을
+            확인해 적합한 대출 종류를 함께 찾아드립니다. 실제 대출 가능
+            여부와 한도·금리·기간은 심사를 진행하는 제휴 대부업체의
+            기준에 따라 달라집니다.
+          </p>
+        </div>
+
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {loanProducts.map((product, index) => (
             <div
               key={product.title}
