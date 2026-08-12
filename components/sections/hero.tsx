@@ -4,7 +4,6 @@ import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { BorderBeamPanel } from "@/components/ui/border-beam-panel";
 import { ConsultForm } from "@/components/sections/consult-form";
-import { ProductsSlider } from "@/components/sections/products-slider";
 
 export function Hero() {
   return (
@@ -48,13 +47,7 @@ export function Hero() {
             대출상품 살펴보기
           </a>
         </div>
-      </div>
 
-      <div className="mt-8">
-        <ProductsSlider />
-      </div>
-
-      <div className="mx-auto max-w-[860px] px-5">
         <div className="relative -mx-5 mt-8 aspect-[860/1499] w-auto overflow-hidden rounded-[8px] border border-border/60 shadow-lg shadow-primary/5 md:mx-auto md:w-full md:max-w-[860px] md:rounded-[18px]">
           <Image
             src="/images/hero2.png"

@@ -21,7 +21,7 @@ export function ProductsSlider() {
               key={n}
               src={`/images/card/${n}.png`}
               alt={`Key We 대부중개 대출상품 안내 카드 ${n}`}
-              className="h-[168px] w-[168px] shrink-0 rounded-2xl object-cover sm:h-[192px] sm:w-[192px]"
+              className="h-[185px] w-[185px] shrink-0 rounded-2xl object-cover sm:h-[211px] sm:w-[211px]"
             />
           ))}
         </InfiniteSlider>

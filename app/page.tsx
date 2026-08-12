@@ -3,6 +3,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { Hero } from "@/components/sections/hero";
 import { About } from "@/components/sections/about";
 import { Services } from "@/components/sections/services";
+import { ProductsSlider } from "@/components/sections/products-slider";
 import { Process } from "@/components/sections/process";
 import { Trust } from "@/components/sections/trust";
 import { Cta } from "@/components/sections/cta";
@@ -15,6 +16,7 @@ export default function Home() {
         <Hero />
         <About />
         <Services />
+        <ProductsSlider />
         <Process />
         <Trust />
         <Cta />
