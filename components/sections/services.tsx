@@ -95,7 +95,9 @@ export function Services() {
 
         <div className="-mx-5 mt-8 rounded-xl border border-border/60 bg-background p-5 md:mx-0">
           <p className="text-sm leading-relaxed text-foreground/70">
-            Key We 대부중개는 직접 대출을 실행하지 않는 대부중개업체입니다.
+            <strong className="rounded bg-primary/10 px-1 py-0.5 font-bold text-primary">
+              Key We 대부중개는 직접 대출을 실행하지 않는 대부중개업체입니다.
+            </strong>{" "}
             고객의 필요금액, 자금 목적, 직업·소득, 신용상태, 보유 담보 등을
             확인해 적합한 대출 종류를 함께 찾아드립니다. 실제 대출 가능
             여부와 한도·금리·기간은 심사를 진행하는 제휴 대부업체의

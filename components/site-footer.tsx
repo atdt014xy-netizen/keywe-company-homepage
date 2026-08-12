@@ -22,8 +22,10 @@ export function SiteFooter() {
               </span>
             </div>
             <p className="mt-3 max-w-xs text-sm leading-relaxed text-foreground/60">
-              등록 대부업체와 고객님을 연결해드리는 대부중개업체입니다.
-              고객에게 별도의 중개수수료를 요구하지 않습니다.
+              등록 대부업체와 고객님을 연결해드리는 대부중개업체입니다.{" "}
+              <strong className="rounded bg-primary/10 px-1 py-0.5 font-bold text-primary">
+                고객에게 별도의 중개수수료를 요구하지 않습니다.
+              </strong>
             </p>
           </div>
 
