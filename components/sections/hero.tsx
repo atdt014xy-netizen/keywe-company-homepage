@@ -4,12 +4,13 @@ import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { BorderBeamPanel } from "@/components/ui/border-beam-panel";
 import { ConsultForm } from "@/components/sections/consult-form";
+import { ProductsSlider } from "@/components/sections/products-slider";
 
 export function Hero() {
   return (
     <section id="top" className="relative overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-secondary/70 via-background to-background" />
-      <div className="mx-auto max-w-[860px] px-5 pt-10 pb-8 md:pt-14">
+      <div className="mx-auto max-w-[860px] px-5 pt-10 md:pt-14">
         <BorderBeamPanel
           beams={2}
           colors={["#8bc34a", "#1e5631"]}
@@ -57,7 +58,13 @@ export function Hero() {
             sizes="(min-width: 672px) 672px, 100vw"
           />
         </div>
+      </div>
 
+      <div className="mt-8">
+        <ProductsSlider />
+      </div>
+
+      <div className="mx-auto max-w-[860px] px-5 pb-8">
         <div id="consult">
           <ConsultForm />
         </div>
