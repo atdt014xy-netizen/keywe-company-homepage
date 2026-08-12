@@ -14,7 +14,7 @@ export function ProductsSlider() {
         </p>
       </div>
 
-      <div className="mt-8">
+      <div className="mx-auto mt-8 max-w-[860px] px-5">
         <InfiniteSlider gap={24} reverse className="py-2">
           {Array.from({ length: cardCount }, (_, i) => i + 1).map((n) => (
             <img
