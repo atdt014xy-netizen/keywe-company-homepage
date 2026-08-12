@@ -79,7 +79,7 @@ const loanProducts = [
 
 export function Services() {
   return (
-    <section id="services" className="bg-secondary/40 py-20">
+    <section id="services" className="bg-secondary/40 py-14">
       <div className="mx-auto max-w-[860px] px-5">
         <h2 className="sr-only">대출상품 안내 — 고객님 상황에 맞는 12가지 대출상품</h2>
 

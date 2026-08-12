@@ -8,7 +8,7 @@ const stats = [
 
 export function About() {
   return (
-    <section id="about" className="mx-auto max-w-[860px] px-5 py-20">
+    <section id="about" className="mx-auto max-w-[860px] px-5 py-14">
       <div className="relative -mx-5 aspect-[1672/941] w-auto overflow-hidden rounded-[8px] border border-border/60 shadow-lg shadow-primary/5 md:mx-0 md:w-full md:rounded-[18px]">
         <Image
           src="/images/menu1.png"

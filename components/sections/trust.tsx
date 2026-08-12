@@ -9,7 +9,7 @@ const badges = [
 
 export function Trust() {
   return (
-    <section id="trust" className="bg-secondary/40 py-20">
+    <section id="trust" className="bg-secondary/40 py-14">
       <div className="mx-auto max-w-[860px] px-5">
         <h2 className="sr-only">고객 신뢰 — 안전하게, 그리고 투명하게</h2>
 

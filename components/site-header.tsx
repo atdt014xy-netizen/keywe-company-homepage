@@ -38,7 +38,7 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden md:block">
-          <a href="#cta" className={cn(buttonVariants({ size: "lg" }), "px-5")}>
+          <a href="#consult" className={cn(buttonVariants({ size: "lg" }), "px-5")}>
             무료 상담 신청
           </a>
         </div>
@@ -67,7 +67,7 @@ export function SiteHeader() {
               </a>
             ))}
             <a
-              href="#cta"
+              href="#consult"
               className="mt-2 rounded-lg bg-primary px-4 py-2.5 text-center text-sm font-semibold text-primary-foreground"
               onClick={() => setOpen(false)}
             >

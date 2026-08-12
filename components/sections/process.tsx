@@ -43,7 +43,7 @@ const steps = [
 
 export function Process() {
   return (
-    <section id="process" className="mx-auto max-w-[860px] px-5 py-20">
+    <section id="process" className="mx-auto max-w-[860px] px-5 py-14">
       <h2 className="sr-only">상담 절차 — 여섯 단계로 진행됩니다</h2>
 
       <div className="relative -mx-5 aspect-[1672/941] w-auto overflow-hidden rounded-[8px] border border-border/60 shadow-lg shadow-primary/5 md:mx-0 md:w-full md:rounded-[18px]">

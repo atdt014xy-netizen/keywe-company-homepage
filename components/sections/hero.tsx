@@ -4,12 +4,13 @@ import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import OrbitingCirclesGlobe from "@/components/ui/orbiting-circles-02";
 import { BorderBeamPanel } from "@/components/ui/border-beam-panel";
+import { ConsultForm } from "@/components/sections/consult-form";
 
 export function Hero() {
   return (
     <section id="top" className="relative overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-secondary/70 via-background to-background" />
-      <div className="mx-auto max-w-[860px] px-5 pt-16 pb-8 md:pt-24">
+      <div className="mx-auto max-w-[860px] px-5 pt-10 pb-8 md:pt-14">
         <BorderBeamPanel
           beams={2}
           colors={["#8bc34a", "#1e5631"]}
@@ -31,7 +32,7 @@ export function Hero() {
 
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <a
-            href="#cta"
+            href="#consult"
             className={cn(buttonVariants({ size: "lg" }), "gap-1.5 px-6")}
           >
             무료 상담 신청하기
@@ -56,6 +57,10 @@ export function Hero() {
             className="object-cover"
             sizes="(min-width: 672px) 672px, 100vw"
           />
+        </div>
+
+        <div id="consult">
+          <ConsultForm />
         </div>
       </div>
 

@@ -2,11 +2,10 @@ import Image from "next/image";
 import { Phone } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { ConsultForm } from "@/components/sections/consult-form";
 
 export function Cta() {
   return (
-    <section id="cta" className="mx-auto max-w-[860px] px-5 py-20">
+    <section id="cta" className="mx-auto max-w-[860px] px-5 py-14">
       <div className="relative -mx-5 aspect-square w-auto overflow-hidden rounded-[8px] border border-border/60 shadow-xl shadow-primary/10 md:mx-0 md:w-full md:rounded-[18px]">
         <Image
           src="/images/foot.png"
@@ -37,8 +36,6 @@ export function Cta() {
           </a>
         </div>
       </div>
-
-      <ConsultForm />
     </section>
   );
 }
