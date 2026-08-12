@@ -56,21 +56,21 @@ export function Process() {
         />
       </div>
 
-      <div className="-mx-5 mt-10 grid gap-6 sm:grid-cols-2 md:mx-0 lg:grid-cols-3">
+      <div className="-mx-5 mt-8 divide-y divide-border/60 overflow-hidden border-y border-border/60 bg-card md:mx-0 md:rounded-xl md:border-x">
         {steps.map((step, index) => (
-          <div key={step.title} className="relative rounded-xl bg-secondary/50 p-6">
-            <span className="font-heading text-3xl font-bold text-primary/25">
-              {String(index + 1).padStart(2, "0")}
+          <div key={step.title} className="flex items-center gap-3.5 px-5 py-3.5 sm:gap-4 sm:px-6 sm:py-4">
+            <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-secondary text-sm font-bold text-primary">
+              {index + 1}
             </span>
-            <div className="mt-2 flex size-10 items-center justify-center rounded-xl bg-background text-primary">
-              <step.icon className="size-5" strokeWidth={1.75} />
+            <step.icon className="size-5 shrink-0 text-primary" strokeWidth={1.75} />
+            <div className="min-w-0">
+              <h3 className="font-heading text-sm font-bold text-foreground sm:text-base">
+                {step.title}
+              </h3>
+              <p className="mt-0.5 text-xs leading-snug text-foreground/60 sm:text-sm">
+                {step.description}
+              </p>
             </div>
-            <h3 className="mt-3 font-heading text-base font-bold text-foreground">
-              {step.title}
-            </h3>
-            <p className="mt-1.5 text-sm leading-relaxed text-foreground/65">
-              {step.description}
-            </p>
           </div>
         ))}
       </div>

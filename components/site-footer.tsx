@@ -17,7 +17,7 @@ export function SiteFooter() {
           <div>
             <div className="flex items-center gap-2">
               <Image src="/icon.png" alt="Key We 대부중개" width={28} height={28} className="rounded-full" />
-              <span className="font-heading text-base font-bold text-primary">
+              <span className="font-sans text-base font-bold text-primary">
                 Key We 대부중개
               </span>
             </div>
