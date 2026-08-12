@@ -5,6 +5,11 @@ import { siteConfig } from "@/lib/site-config";
  * from siteConfig where confirmed; fields without a confirmed real value
  * stay as an explicit "확인 후 입력" placeholder instead of an invented
  * number — edit the constants below once the real figures are supplied.
+ *
+ * Interest/overdue rate are the statutory ceiling and hold regardless of
+ * which partner lender is matched. Repayment period, method, extra costs,
+ * and early-repayment terms vary by partner and product, so those are
+ * intentionally not stated as fixed figures — see varyingTermsText.
  */
 const disclosure = {
   businessName: siteConfig.legalName,
@@ -13,11 +18,8 @@ const disclosure = {
   interestRateText:
     "연 20% 이내 (2021년 7월 7일 이후 체결·갱신·연장되는 계약에 한함)",
   overdueRateText: "연 20% 이내",
-  extraCostText: "취급수수료 없음 · 중개수수료 없음",
-  earlyRepaymentText: "중도상환수수료 없음",
-  repaymentPeriodText: "12~60개월",
-  loanExampleText:
-    "100만원을 12개월, 최대금리 연 20%, 원리금균등상환 방법으로 이용하는 경우 총 상환금액 1,111,614원. 대출상품 및 상환방법 등 대출계약 조건에 따라 달라질 수 있습니다.",
+  varyingTermsText:
+    "상환기간·상환방법·부대비용·중도상환조건은 제휴 대부업체 및 상품별 계약조건에 따라 달라질 수 있습니다.",
   debtWarningText: "과도한 빚은 당신에게 큰 불행을 안겨줄 수 있습니다.",
   creditScoreWarningText:
     "대출 시 신용등급 또는 개인신용평점 하락으로 다른 금융거래가 제약받을 수 있습니다.",
@@ -38,30 +40,15 @@ export function LoanAdvertisementDisclosure() {
         </p>
         <dl className="mt-3 grid grid-cols-1 gap-x-6 gap-y-1.5 sm:grid-cols-2">
           <div className="flex gap-1.5">
-            <dt className="shrink-0 font-medium text-foreground/70">이자율</dt>
+            <dt className="shrink-0 font-medium text-foreground/70">대출금리</dt>
             <dd>{disclosure.interestRateText}</dd>
           </div>
           <div className="flex gap-1.5">
             <dt className="shrink-0 font-medium text-foreground/70">연체이자율</dt>
             <dd>{disclosure.overdueRateText}</dd>
           </div>
-          <div className="flex gap-1.5">
-            <dt className="shrink-0 font-medium text-foreground/70">부대비용</dt>
-            <dd>{disclosure.extraCostText}</dd>
-          </div>
-          <div className="flex gap-1.5">
-            <dt className="shrink-0 font-medium text-foreground/70">중도상환</dt>
-            <dd>{disclosure.earlyRepaymentText}</dd>
-          </div>
-          <div className="flex gap-1.5">
-            <dt className="shrink-0 font-medium text-foreground/70">상환기간</dt>
-            <dd>{disclosure.repaymentPeriodText}</dd>
-          </div>
         </dl>
-        <p className="mt-3">
-          <span className="font-medium text-foreground/70">대출 예시</span>{" "}
-          {disclosure.loanExampleText}
-        </p>
+        <p className="mt-3">{disclosure.varyingTermsText}</p>
         <p className="mt-3 space-y-0.5">
           <span className="block">{disclosure.brokerageFeeWarningText}</span>
           <span className="block">{disclosure.debtWarningText}</span>

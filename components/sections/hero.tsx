@@ -20,7 +20,7 @@ export function Hero() {
           <div className="absolute inset-0 overflow-hidden rounded-[12px]">
             <Image
               src="/images/hero.png"
-              alt="Key We 대부중개 로고와 도심 빌딩가에 위치한 사무실 전경 일러스트"
+              alt="키위대부중개 로고와 도심 빌딩가에 위치한 사무실 전경 일러스트"
               fill
               priority
               className="object-cover"

@@ -50,7 +50,7 @@ export function Process() {
       </h2>
       <p className="mt-3 max-w-2xl leading-relaxed text-foreground/70">
         <strong className="rounded bg-primary/10 px-1 py-0.5 font-bold text-primary">
-          Key We 대부중개가 대출을 직접 실행하는 것이 아니라, 제휴 대부업체가
+          키위대부중개가 대출을 직접 실행하는 것이 아니라, 제휴 대부업체가
           심사하고 실행합니다.
         </strong>{" "}
         저희는 그 과정을 상담부터 조건 안내까지 함께 도와드립니다.

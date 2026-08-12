@@ -45,7 +45,7 @@ export function Trust() {
         </div>
 
         <p className="mx-auto mt-8 max-w-xl text-center leading-relaxed text-foreground/70">
-          Key We 대부중개는 대부중개업 등록업체로서, 고객님을 직접 대출을
+          키위대부중개는 대부중개업 등록업체로서, 고객님을 직접 대출을
           실행하는 제휴 대부업체와 연결해드립니다. 승인 여부와 대출 조건은
           심사를 진행하는 해당 업체의 기준에 따라 결정됩니다.
         </p>

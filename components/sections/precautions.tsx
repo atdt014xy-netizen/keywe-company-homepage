@@ -18,11 +18,11 @@ export function Precautions() {
         아래 내용을 계약 전에 꼭 확인해 주세요.
       </p>
 
-      <div className="mt-8 rounded-xl border border-border/60 bg-card p-5 shadow-sm sm:p-6">
-        <h3 className="font-heading text-base font-bold text-foreground">
-          중개를 위탁한 등록 대부업체
-        </h3>
-        {lenderPartners.length > 0 ? (
+      {lenderPartners.length > 0 && (
+        <div className="mt-8 rounded-xl border border-border/60 bg-card p-5 shadow-sm sm:p-6">
+          <h3 className="font-heading text-base font-bold text-foreground">
+            중개를 위탁한 등록 대부업체
+          </h3>
           <ul className="mt-3 space-y-2 text-sm text-foreground/75">
             {lenderPartners.map((partner) => (
               <li
@@ -47,15 +47,10 @@ export function Precautions() {
               </li>
             ))}
           </ul>
-        ) : (
-          <p className="mt-3 rounded-lg bg-secondary/50 px-3 py-2.5 text-sm text-foreground/60">
-            제휴 대부업체 목록은 확인 후 게시 예정입니다. 상담 과정에서
-            연결될 업체명과 연락처를 안내해 드립니다.
-          </p>
-        )}
-      </div>
+        </div>
+      )}
 
-      <div className="mt-4 space-y-3">
+      <div className="mt-8 space-y-3">
         {precautionItems.map((item) => (
           <details
             key={item.id}
@@ -86,9 +81,9 @@ export function Precautions() {
       <div className="mt-6 flex items-start gap-3 rounded-xl border border-primary/20 bg-primary/5 p-5 text-sm leading-relaxed text-foreground/75">
         <AlertTriangle className="mt-0.5 size-5 shrink-0 text-primary" />
         <p>
-          과도한 빚, 고통의 시작입니다. 상환 능력을 초과하는 대출은
-          개인신용평점 하락 등 불이익을 초래할 수 있으니 신중하게 결정해
-          주세요.
+          과도한 빚은 당신에게 큰 불행을 안겨줄 수 있습니다. 상환 능력을
+          초과하는 대출은 개인신용평점 하락 등 불이익을 초래할 수 있으니
+          신중하게 결정해 주세요.
         </p>
       </div>
     </section>
