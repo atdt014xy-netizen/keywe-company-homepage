@@ -30,12 +30,12 @@ export function Hero() {
         </BorderBeamPanel>
 
         <div className="mx-auto mt-8 max-w-xl text-center">
-          <h1 className="text-balance font-heading text-2xl font-bold text-foreground sm:text-3xl">
-            상황에 맞는 대출, 키위대부중개가 함께 찾아드립니다
+          <h1 className="text-balance font-heading text-3xl font-bold text-foreground sm:text-4xl">
+            상황이 다르면, 대출의 답도 달라야 합니다
           </h1>
           <p className="mt-3 text-balance leading-relaxed text-foreground/70">
-            직접 대출을 실행하지 않는 정식 등록 대부중개업체입니다. 고객님의
-            상황을 확인한 후 취급 가능한 등록 대부업체의 상품을 안내합니다.
+            고객님의 현재 상황을 확인하고 취급 가능한 등록 대부업체의
+            상품을 안내합니다.
           </p>
         </div>
 

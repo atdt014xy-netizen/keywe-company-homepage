@@ -88,7 +88,7 @@ export function ProductsCarousel() {
         고객님 상황에 맞는 12가지 대출상품
       </h2>
       <p className="mt-3 max-w-2xl leading-relaxed text-foreground/70">
-        <strong className="rounded bg-primary/10 px-1 py-0.5 font-bold text-primary">
+        <strong className="font-bold text-primary">
           키위대부중개는 직접 대출을 실행하지 않는 대부중개업체입니다.
         </strong>{" "}
         고객의 필요금액, 자금 목적, 직업·소득, 신용상태, 보유 담보 등을
