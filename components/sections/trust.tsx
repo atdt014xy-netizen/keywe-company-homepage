@@ -1,68 +1,44 @@
 import Image from "next/image";
-import { Quote, ShieldCheck, HandCoins, Lock, Star } from "lucide-react";
+import { Lightbulb } from "lucide-react";
 
-const badges = [
-  { icon: ShieldCheck, label: "정식 등록된 대부업체만 연결합니다" },
-  { icon: HandCoins, label: "고객에게 중개수수료·사례금을 요구하지 않습니다" },
-  { icon: Lock, label: "수집한 정보는 대부중개 목적 외로 사용하지 않습니다" },
-];
-
-const reviews = [
+const consultCases = [
   {
-    rating: 5,
-    quote:
-      "복잡하게만 느껴지던 대출 상담을 제 상황에 맞게 차근차근 설명해 주셔서 마음이 놓였어요. 어떤 대부업체와 연결되는지도 투명하게 알려주셔서 믿음이 갔습니다.",
-    author: "상담 고객",
+    category: "개인신용대출 상담 사례",
+    summary:
+      "여러 곳에 알아봐도 막막했던 경우, 소득·신용상태를 확인한 뒤 취급 가능한 신용대출 상품을 함께 비교해 안내한 사례입니다.",
   },
   {
-    rating: 5,
-    quote:
-      "급하게 자금이 필요해 마음이 급했는데, 상담사님이 편안하게 이야기를 들어주셔서 부담 없이 진행할 수 있었어요. 원하는 조건으로 잘 해결됐습니다.",
-    author: "사업자대출 상담 고객",
+    category: "사업자대출 상담 사례",
+    summary:
+      "사업자금이 급하게 필요했던 경우, 사업 현황과 매출·담보 조건을 확인해 운영자금 상품 여부를 상담한 사례입니다.",
   },
   {
-    rating: 4.5,
-    quote:
-      "여기저기 알아봐도 막막했는데, 제 상황을 꼼꼼히 살펴보고 맞는 상품을 찾아주셔서 감사했습니다. 상담이 편안해서 끝까지 믿고 맡길 수 있었어요.",
-    author: "개인신용대출 상담 고객",
+    category: "자동차담보대출 상담 사례",
+    summary:
+      "대출이 처음이라 절차가 낯설었던 경우, 필요서류와 진행 절차를 단계별로 안내해 상담을 진행한 사례입니다.",
   },
   {
-    rating: 5,
-    quote:
-      "대출이 처음이라 걱정이 많았는데, 하나하나 친절하게 설명해 주셔서 마음 편하게 상담받았고 무사히 해결됐습니다.",
-    author: "자동차담보대출 상담 고객",
+    category: "대환대출 상담 사례",
+    summary:
+      "기존 대출 조건을 부담스러워했던 경우, 현재 대출 현황을 확인해 대환 가능 여부를 함께 검토한 사례입니다.",
   },
 ];
-
-function StarRating({ rating }: { rating: number }) {
-  return (
-    <div className="flex items-center gap-0.5" aria-label={`평점 ${rating}점`}>
-      {Array.from({ length: 5 }).map((_, i) => {
-        const fillPercent = Math.max(0, Math.min(1, rating - i)) * 100;
-        return (
-          <span key={i} className="relative inline-block size-3.5">
-            <Star className="absolute inset-0 size-3.5 text-amber-400" strokeWidth={1.5} />
-            <span className="absolute inset-0 overflow-hidden" style={{ width: `${fillPercent}%` }}>
-              <Star className="size-3.5 fill-amber-400 text-amber-400" strokeWidth={1.5} />
-            </span>
-          </span>
-        );
-      })}
-    </div>
-  );
-}
 
 export function Trust() {
   return (
     <section id="trust" className="bg-secondary/40 py-14">
-      <div className="mx-auto max-w-[860px] px-5">
-        <h2 className="sr-only">고객 신뢰 — 안전하게, 그리고 투명하게</h2>
+      <div className="mx-auto max-w-[860px] scroll-mt-20 px-5">
+        <span className="text-sm font-semibold text-primary">안전하고 투명한 상담</span>
+        <h2 className="mt-3 text-balance font-heading text-2xl font-bold text-foreground sm:text-3xl">
+          고객 신뢰 — 안전하게, 그리고 투명하게
+        </h2>
 
-        <div className="relative -mx-5 aspect-[1672/941] w-auto overflow-hidden rounded-[8px] border border-border/60 shadow-lg shadow-primary/5 md:mx-0 md:w-full md:rounded-[18px]">
+        <div className="relative -mx-5 mt-6 aspect-[1672/941] w-auto overflow-hidden rounded-[8px] border border-border/60 shadow-lg shadow-primary/5 md:mx-0 md:w-full md:rounded-[18px]">
           <Image
             src="/images/menu4.png"
-            alt="고객 신뢰 — 안전하게, 그리고 투명하게, 상담사가 체크리스트로 안내하는 모습"
+            alt="상담사가 체크리스트를 짚어가며 고객에게 상담 절차를 안내하는 모습"
             fill
+            loading="lazy"
             className="object-cover"
             sizes="(min-width: 860px) 860px, 100vw"
           />
@@ -74,40 +50,36 @@ export function Trust() {
           심사를 진행하는 해당 업체의 기준에 따라 결정됩니다.
         </p>
 
-        <ul className="mx-auto mt-6 flex max-w-xl flex-col gap-3 sm:flex-row sm:justify-center sm:gap-6">
-          {badges.map((badge) => (
-            <li key={badge.label} className="flex items-center gap-3">
-              <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-background text-primary">
-                <badge.icon className="size-4.5" strokeWidth={1.75} />
-              </span>
-              <span className="font-sans text-sm font-bold text-foreground/80">
-                {badge.label}
-              </span>
-            </li>
-          ))}
-        </ul>
+        <div className="mt-10">
+          <h3 className="text-center font-heading text-lg font-bold text-foreground">
+            상담 사례 예시
+          </h3>
+          <p className="mx-auto mt-1.5 max-w-xl text-center text-xs text-foreground/50">
+            아래 내용은 상담 유형을 소개하기 위해 구성한 예시이며, 특정
+            고객의 실제 후기가 아닙니다.
+          </p>
 
-        <div className="-mx-5 mt-8 grid gap-4 sm:grid-cols-2 md:mx-0">
-          {reviews.map((review) => (
-            <blockquote
-              key={review.author + review.quote.slice(0, 8)}
-              className="rounded-xl bg-background p-5 shadow-sm sm:p-6"
-            >
-              <div className="flex items-center justify-between">
-                <Quote className="size-5 text-primary/40" />
-                <StarRating rating={review.rating} />
+          <div className="-mx-5 mt-6 grid gap-4 sm:grid-cols-2 md:mx-0">
+            {consultCases.map((item) => (
+              <div
+                key={item.category}
+                className="rounded-xl bg-background p-5 shadow-sm sm:p-6"
+              >
+                <div className="flex items-center gap-2">
+                  <Lightbulb className="size-4.5 text-primary/60" aria-hidden="true" />
+                  <span className="text-sm font-bold text-foreground">
+                    {item.category}
+                  </span>
+                </div>
+                <p className="mt-3 text-sm leading-relaxed text-foreground/75">
+                  {item.summary}
+                </p>
               </div>
-              <p className="mt-3 text-sm leading-relaxed text-foreground/80">
-                &ldquo;{review.quote}&rdquo;
-              </p>
-              <footer className="mt-3 text-xs font-medium text-foreground/50">
-                — Key We 대부중개 {review.author}
-              </footer>
-            </blockquote>
-          ))}
+            ))}
+          </div>
         </div>
 
-        <p className="mx-auto mt-4 max-w-xl text-center text-xs leading-relaxed text-foreground/45">
+        <p className="mx-auto mt-6 max-w-xl text-center text-xs leading-relaxed text-foreground/45">
           대출 가능 여부, 한도, 금리 및 기타 조건은 실제 심사를 진행하는
           제휴 대부업체의 기준에 따라 달라질 수 있습니다.
         </p>

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { siteConfig } from "@/lib/site-config";
 
 export function SiteFooter() {
   return (
@@ -17,9 +18,9 @@ export function SiteFooter() {
         <div className="flex flex-col items-start justify-between gap-8 sm:flex-row">
           <div>
             <div className="flex items-center gap-2">
-              <Image src="/icon.png" alt="Key We 대부중개" width={28} height={28} className="rounded-full" />
+              <Image src="/icon.png" alt={siteConfig.brandName} width={28} height={28} className="rounded-full" />
               <span className="font-sans text-base font-bold text-primary">
-                Key We 대부중개
+                {siteConfig.brandName}
               </span>
             </div>
             <p className="mt-3 max-w-xs text-sm leading-relaxed text-foreground/60">
@@ -31,25 +32,43 @@ export function SiteFooter() {
           </div>
 
           <div className="text-sm leading-relaxed text-foreground/60">
-            <p>부산광역시 중구 남포동1가 21-6</p>
-            <p>전화 010-7741-5434 · 이메일 atdt014xy@gmail.com</p>
-            <p>평일 09:00 – 18:00 (주말·공휴일 휴무)</p>
-            <p className="mt-1 font-medium text-primary">
-              급한 용무는 365일 언제든 연락 주세요.
+            <p>{siteConfig.address}</p>
+            <p>
+              전화 {siteConfig.phone} · 이메일 {siteConfig.email}
             </p>
+            <p>{siteConfig.hours.phone.replace("전화 상담: ", "전화 상담 ")}</p>
+            <p>{siteConfig.hours.online.replace("홈페이지 상담 신청: ", "온라인 상담 신청 ")}</p>
+            <p className="mt-1 text-xs text-foreground/45">{siteConfig.hours.note}</p>
           </div>
         </div>
 
         <div className="mt-8 border-t border-border/60 pt-6 text-xs text-foreground/60">
-          <p className="font-bold text-foreground/80">
-            사업자등록번호 753-05-03649 · 대부중개업 등록번호 2025-부산동구-03010
-          </p>
+          <dl className="grid grid-cols-1 gap-x-6 gap-y-1 sm:grid-cols-2">
+            <div className="flex gap-1.5">
+              <dt className="font-bold text-foreground/80">상호</dt>
+              <dd>{siteConfig.legalName}</dd>
+            </div>
+            {siteConfig.representativeName && (
+              <div className="flex gap-1.5">
+                <dt className="font-bold text-foreground/80">대표자</dt>
+                <dd>{siteConfig.representativeName}</dd>
+              </div>
+            )}
+            <div className="flex gap-1.5">
+              <dt className="font-bold text-foreground/80">사업자등록번호</dt>
+              <dd>{siteConfig.businessRegistrationNumber}</dd>
+            </div>
+            <div className="flex gap-1.5">
+              <dt className="font-bold text-foreground/80">대부중개업 등록번호</dt>
+              <dd>{siteConfig.brokerageRegistrationNumber}</dd>
+            </div>
+          </dl>
           <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1">
             <Link href="/privacy" className="font-semibold text-primary hover:underline">
               개인정보처리방침
             </Link>
             <span className="text-foreground/45">
-              © {new Date().getFullYear()} Key We 대부중개. All rights reserved.
+              © {new Date().getFullYear()} {siteConfig.brandName}. All rights reserved.
             </span>
           </div>
         </div>

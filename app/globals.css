@@ -128,4 +128,19 @@
     word-break: keep-all;
     overflow-wrap: break-word;
   }
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible,
+  summary:focus-visible {
+    @apply outline-2 outline-offset-2 outline-ring;
+  }
+}
+
+/* Room for the fixed mobile CTA bar so it never covers page content. */
+@media (max-width: 767px) {
+  body {
+    padding-bottom: calc(3.75rem + env(safe-area-inset-bottom));
+  }
 }

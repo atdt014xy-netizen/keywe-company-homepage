@@ -1,14 +1,9 @@
 import Image from "next/image";
-
-const stats = [
-  { value: "15년+", label: "대출 상담 경력" },
-  { value: "1,200+", label: "누적 상담 고객" },
-  { value: "4.9/5", label: "고객 만족도" },
-];
+import { SHOW_STATS, aboutStats } from "@/lib/site-config";
 
 export function About() {
   return (
-    <section id="about" className="mx-auto max-w-[860px] px-5 py-14">
+    <section id="about" className="mx-auto max-w-[860px] scroll-mt-20 px-5 py-14">
       <div className="relative -mx-5 aspect-[1672/941] w-auto overflow-hidden rounded-[8px] border border-border/60 shadow-lg shadow-primary/5 md:mx-0 md:w-full md:rounded-[18px]">
         <Image
           src="/images/menu1.png"
@@ -42,22 +37,24 @@ export function About() {
         </div>
       </div>
 
-      <dl className="-mx-5 mt-8 grid grid-cols-3 gap-4 md:mx-auto md:max-w-2xl">
-        {stats.map((stat) => (
-          <div
-            key={stat.label}
-            className="rounded-lg bg-secondary/60 px-3 py-4 text-center"
-          >
-            <dt className="sr-only">{stat.label}</dt>
-            <dd className="font-heading text-xl font-bold text-primary sm:text-2xl">
-              {stat.value}
-            </dd>
-            <dd className="mt-1 text-xs text-foreground/60 sm:text-sm">
-              {stat.label}
-            </dd>
-          </div>
-        ))}
-      </dl>
+      {SHOW_STATS && (
+        <dl className="-mx-5 mt-8 grid grid-cols-3 gap-4 md:mx-auto md:max-w-2xl">
+          {aboutStats.map((stat) => (
+            <div
+              key={stat.label}
+              className="rounded-lg bg-secondary/60 px-3 py-4 text-center"
+            >
+              <dt className="sr-only">{stat.label}</dt>
+              <dd className="font-heading text-xl font-bold text-primary sm:text-2xl">
+                {stat.value}
+              </dd>
+              <dd className="mt-1 text-xs text-foreground/60 sm:text-sm">
+                {stat.label}
+              </dd>
+            </div>
+          ))}
+        </dl>
+      )}
     </section>
   );
 }

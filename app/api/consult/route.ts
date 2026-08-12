@@ -28,7 +28,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: true });
   }
 
-  if (!name || !phone || !consentRequired || !consentThirdParty) {
+  if (!name || !phone || !consentRequired) {
     return NextResponse.json(
       { error: "이름, 휴대전화번호와 필수 동의 항목을 모두 입력해주세요." },
       { status: 400 }

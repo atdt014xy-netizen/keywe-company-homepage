@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "개인정보 처리방침 | Key We 대부중개",
-  description:
-    "Key We 대부중개의 개인정보 처리 목적, 항목, 보유기간, 제3자 제공, 위탁, 파기, 정보주체의 권리 및 보호책임자에 관한 안내입니다.",
+  title: `개인정보 처리방침 | ${siteConfig.brandName}`,
+  description: `${siteConfig.brandName}의 개인정보 처리 목적, 항목, 보유기간, 제3자 제공, 위탁, 파기, 정보주체의 권리 및 보호책임자에 관한 안내입니다.`,
+  alternates: { canonical: "/privacy" },
 };
 
 function Article({
@@ -45,7 +46,7 @@ export default function PrivacyPage() {
             개인정보 처리방침
           </h1>
           <p className="mt-5 leading-relaxed text-foreground/70">
-            Key We 대부중개(이하 &ldquo;회사&rdquo;)는 고객님의 개인정보를
+            {siteConfig.legalName}(이하 &ldquo;회사&rdquo;)는 고객님의 개인정보를
             중요하게 생각하며, 「개인정보 보호법」 등 관련 법령을 준수하고
             있습니다. 회사는 대출 상담 및 대부중개 서비스 제공 과정에서
             필요한 최소한의 개인정보만을 처리하며, 개인정보가 어떠한
@@ -349,31 +350,31 @@ export default function PrivacyPage() {
               <dl className="mt-2 grid grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-2">
                 <div>
                   <dt className="font-semibold text-foreground">상호</dt>
-                  <dd>Key We 대부중개</dd>
+                  <dd>{siteConfig.legalName}</dd>
                 </div>
                 <div>
                   <dt className="font-semibold text-foreground">개인정보 보호책임자</dt>
-                  <dd>류수인</dd>
+                  <dd>{siteConfig.privacyOfficerName}</dd>
                 </div>
                 <div>
                   <dt className="font-semibold text-foreground">전화</dt>
-                  <dd>010-7741-5434</dd>
+                  <dd>{siteConfig.phone}</dd>
                 </div>
                 <div>
                   <dt className="font-semibold text-foreground">이메일</dt>
-                  <dd>atdt014xy@gmail.com</dd>
+                  <dd>{siteConfig.email}</dd>
                 </div>
                 <div>
                   <dt className="font-semibold text-foreground">주소</dt>
-                  <dd>부산광역시 중구 남포동1가 21-6</dd>
+                  <dd>{siteConfig.address}</dd>
                 </div>
                 <div>
                   <dt className="font-semibold text-foreground">사업자등록번호</dt>
-                  <dd>753-05-03649</dd>
+                  <dd>{siteConfig.businessRegistrationNumber}</dd>
                 </div>
                 <div>
                   <dt className="font-semibold text-foreground">대부중개업 등록번호</dt>
-                  <dd>2025-부산동구-03010</dd>
+                  <dd>{siteConfig.brokerageRegistrationNumber}</dd>
                 </div>
               </dl>
               <p>
@@ -409,7 +410,7 @@ export default function PrivacyPage() {
               <p className="mt-2">공고일자: 2026년 8월 12일</p>
               <p>시행일자: 2026년 8월 12일</p>
               <p className="mt-4">
-                Key We 대부중개는 고객님의 개인정보를 소중하게 보호하며,
+                {siteConfig.legalName}는 고객님의 개인정보를 소중하게 보호하며,
                 수집한 개인정보를 고객이 동의한 목적과 범위를 벗어나
                 임의로 이용하거나 제공하지 않습니다.
               </p>

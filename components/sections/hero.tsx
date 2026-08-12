@@ -3,13 +3,13 @@ import { ArrowRight } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { BorderBeamPanel } from "@/components/ui/border-beam-panel";
-import { ConsultForm } from "@/components/sections/consult-form";
+import { ConsultCtaButton } from "@/components/consult-cta-button";
 
 export function Hero() {
   return (
     <section id="top" className="relative overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-secondary/70 via-background to-background" />
-      <div className="mx-auto max-w-[860px] px-5 pt-10 md:pt-14">
+      <div className="mx-auto max-w-[860px] px-5 pt-10 pb-8 md:pt-14">
         <BorderBeamPanel
           beams={2}
           colors={["#8bc34a", "#1e5631"]}
@@ -20,7 +20,7 @@ export function Hero() {
           <div className="absolute inset-0 overflow-hidden rounded-[12px]">
             <Image
               src="/images/hero.png"
-              alt="Key We 대부중개 로고와 '신뢰를 바탕으로 한 맞춤 금융 상담' 문구, 도심 빌딩가에 위치한 사무실"
+              alt="Key We 대부중개 로고와 도심 빌딩가에 위치한 사무실 전경 일러스트"
               fill
               priority
               className="object-cover"
@@ -29,14 +29,21 @@ export function Hero() {
           </div>
         </BorderBeamPanel>
 
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-          <a
-            href="#consult"
-            className={cn(buttonVariants({ size: "lg" }), "gap-1.5 px-6")}
-          >
-            무료 상담 신청하기
+        <div className="mx-auto mt-8 max-w-xl text-center">
+          <h1 className="text-balance font-heading text-2xl font-bold text-foreground sm:text-3xl">
+            상황에 맞는 대출, 키위대부중개가 함께 찾아드립니다
+          </h1>
+          <p className="mt-3 text-balance leading-relaxed text-foreground/70">
+            직접 대출을 실행하지 않는 정식 등록 대부중개업체입니다. 고객님의
+            상황을 확인한 후 취급 가능한 등록 대부업체의 상품을 안내합니다.
+          </p>
+        </div>
+
+        <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+          <ConsultCtaButton className={cn(buttonVariants({ size: "lg" }), "gap-1.5 px-6")}>
+            무료 상담 신청
             <ArrowRight className="size-4" />
-          </a>
+          </ConsultCtaButton>
           <a
             href="#services"
             className={cn(
@@ -44,24 +51,8 @@ export function Hero() {
               "px-6"
             )}
           >
-            대출상품 살펴보기
+            대출상품 보기
           </a>
-        </div>
-
-        <div className="relative -mx-5 mt-8 aspect-[860/1499] w-auto overflow-hidden rounded-[8px] border border-border/60 shadow-lg shadow-primary/5 md:mx-auto md:w-full md:max-w-[860px] md:rounded-[18px]">
-          <Image
-            src="/images/hero2.png"
-            alt="Key We 대부중개 알선 가능한 주요 대출 상품 8종, 상담 진행 절차, 안내 사항"
-            fill
-            className="object-cover"
-            sizes="(min-width: 672px) 672px, 100vw"
-          />
-        </div>
-      </div>
-
-      <div className="mx-auto max-w-[860px] px-5 pb-8">
-        <div id="consult">
-          <ConsultForm />
         </div>
       </div>
     </section>

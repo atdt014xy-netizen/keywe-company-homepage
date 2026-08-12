@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useId, useState, type FormEvent } from "react";
 import Link from "next/link";
 import { Loader2, CheckCircle2 } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
@@ -10,7 +10,9 @@ const categories = ["신용대출", "담보대출", "사업자대출", "기타"]
 
 type Status = "idle" | "submitting" | "success" | "error";
 
-export function ConsultForm() {
+export function ConsultForm({ bare = false }: { bare?: boolean }) {
+  const uid = useId();
+  const fieldId = (suffix: string) => `${uid}-${suffix}`;
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [category, setCategory] = useState("");
@@ -25,7 +27,6 @@ export function ConsultForm() {
     name.trim().length > 0 &&
     phone.trim().length > 0 &&
     consentRequired &&
-    consentThirdParty &&
     status !== "submitting";
 
   async function handleSubmit(e: FormEvent) {
@@ -67,7 +68,12 @@ export function ConsultForm() {
 
   if (status === "success") {
     return (
-      <div className="-mx-5 mt-8 flex flex-col items-center gap-3 rounded-[8px] border border-border/60 bg-card p-8 text-center shadow-sm md:mx-0 md:rounded-[18px]">
+      <div
+        className={cn(
+          "flex flex-col items-center gap-3 rounded-[8px] border border-border/60 bg-card p-8 text-center shadow-sm md:rounded-[18px]",
+          !bare && "-mx-5 mt-8 md:mx-0"
+        )}
+      >
         <CheckCircle2 className="size-10 text-primary" strokeWidth={1.5} />
         <p className="font-heading text-lg font-bold text-foreground">
           상담 신청이 정상적으로 접수되었습니다.
@@ -81,8 +87,12 @@ export function ConsultForm() {
 
   return (
     <form
+      id={fieldId("form")}
       onSubmit={handleSubmit}
-      className="-mx-5 mt-8 rounded-[8px] border border-border/60 bg-card p-6 shadow-sm sm:p-8 md:mx-0 md:rounded-[18px]"
+      className={cn(
+        "rounded-[8px] border border-border/60 bg-card p-6 shadow-sm sm:p-8 md:rounded-[18px]",
+        !bare && "-mx-5 mt-8 md:mx-0"
+      )}
     >
       <h3 className="font-heading text-xl font-bold text-foreground">무료 상담 신청</h3>
       <p className="mt-1.5 text-sm text-foreground/60">
@@ -103,11 +113,11 @@ export function ConsultForm() {
 
       <div className="mt-6 space-y-4">
         <div>
-          <label htmlFor="consult-name" className="text-sm font-medium text-foreground">
+          <label htmlFor={fieldId("name")} className="text-sm font-medium text-foreground">
             이름
           </label>
           <input
-            id="consult-name"
+            id={fieldId("name")}
             type="text"
             required
             value={name}
@@ -118,11 +128,11 @@ export function ConsultForm() {
         </div>
 
         <div>
-          <label htmlFor="consult-phone" className="text-sm font-medium text-foreground">
+          <label htmlFor={fieldId("phone")} className="text-sm font-medium text-foreground">
             휴대전화
           </label>
           <input
-            id="consult-phone"
+            id={fieldId("phone")}
             type="tel"
             required
             value={phone}
@@ -133,11 +143,11 @@ export function ConsultForm() {
         </div>
 
         <div>
-          <label htmlFor="consult-category" className="text-sm font-medium text-foreground">
+          <label htmlFor={fieldId("category")} className="text-sm font-medium text-foreground">
             상담 분야 <span className="text-foreground/40">(선택사항)</span>
           </label>
           <select
-            id="consult-category"
+            id={fieldId("category")}
             value={category}
             onChange={(e) => setCategory(e.target.value)}
             className="mt-1.5 w-full rounded-lg border border-border bg-background px-3.5 py-2.5 text-sm text-foreground outline-none focus:border-ring focus:ring-3 focus:ring-ring/50"
@@ -153,8 +163,9 @@ export function ConsultForm() {
       </div>
 
       <div className="mt-5 space-y-2.5 border-t border-border/60 pt-5">
-        <label className="flex items-start gap-2.5 text-sm text-foreground/80">
+        <label htmlFor={fieldId("consent-required")} className="flex cursor-pointer items-start gap-2.5 text-sm text-foreground/80">
           <input
+            id={fieldId("consent-required")}
             type="checkbox"
             required
             checked={consentRequired}
@@ -162,33 +173,36 @@ export function ConsultForm() {
             className="mt-0.5 size-4 shrink-0 accent-primary"
           />
           <span>
-            <span className="font-medium text-foreground">[필수]</span> 개인정보
-            수집·이용에 동의합니다.{" "}
+            <span className="font-medium text-foreground">[필수]</span> 상담을
+            위한 개인정보 수집·이용에 동의합니다.{" "}
             <Link href="/privacy" target="_blank" className="text-primary underline underline-offset-2">
               내용보기
             </Link>
           </span>
         </label>
 
-        <label className="flex items-start gap-2.5 text-sm text-foreground/80">
+        <label htmlFor={fieldId("consent-third-party")} className="flex cursor-pointer items-start gap-2.5 text-sm text-foreground/80">
           <input
+            id={fieldId("consent-third-party")}
             type="checkbox"
-            required
             checked={consentThirdParty}
             onChange={(e) => setConsentThirdParty(e.target.checked)}
             className="mt-0.5 size-4 shrink-0 accent-primary"
           />
           <span>
-            <span className="font-medium text-foreground">[필수]</span> 제휴
-            대부업체 개인정보 제공에 동의합니다.{" "}
+            <span className="font-medium text-foreground/60">[선택]</span> 제휴
+            대부업체가 정해지면 업체명을 안내받고 개인정보 제공에 동의합니다.
+            (연결 업체가 결정된 후 담당자가 업체명을 구체적으로 안내하며 별도
+            동의를 다시 확인합니다.){" "}
             <Link href="/privacy" target="_blank" className="text-primary underline underline-offset-2">
               내용보기
             </Link>
           </span>
         </label>
 
-        <label className="flex items-start gap-2.5 text-sm text-foreground/80">
+        <label htmlFor={fieldId("consent-marketing")} className="flex cursor-pointer items-start gap-2.5 text-sm text-foreground/80">
           <input
+            id={fieldId("consent-marketing")}
             type="checkbox"
             checked={consentMarketing}
             onChange={(e) => setConsentMarketing(e.target.checked)}

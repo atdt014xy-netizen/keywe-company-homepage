@@ -6,6 +6,8 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { siteConfig } from "@/lib/site-config";
+import { ConsultCtaButton } from "@/components/consult-cta-button";
 
 const navLinks = [
   { href: "#about", label: "회사 소개" },
@@ -21,8 +23,8 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-[860px] items-center justify-between px-5">
         <Link href="#top" className="flex items-center gap-2">
-          <Image src="/icon.png" alt="Key We 대부중개" width={32} height={32} className="rounded-full" />
-          <span className="font-sans text-lg font-bold text-primary">Key We 대부중개</span>
+          <Image src="/icon.png" alt={siteConfig.brandName} width={32} height={32} className="rounded-full" />
+          <span className="font-sans text-lg font-bold text-primary">{siteConfig.brandName}</span>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
@@ -38,9 +40,9 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden md:block">
-          <a href="#consult" className={cn(buttonVariants({ size: "lg" }), "px-5")}>
+          <ConsultCtaButton className={cn(buttonVariants({ size: "lg" }), "px-5")}>
             무료 상담 신청
-          </a>
+          </ConsultCtaButton>
         </div>
 
         <button
@@ -66,13 +68,12 @@ export function SiteHeader() {
                 {link.label}
               </a>
             ))}
-            <a
-              href="#consult"
+            <ConsultCtaButton
               className="mt-2 rounded-lg bg-primary px-4 py-2.5 text-center text-sm font-semibold text-primary-foreground"
-              onClick={() => setOpen(false)}
+              onNavigate={() => setOpen(false)}
             >
               무료 상담 신청
-            </a>
+            </ConsultCtaButton>
           </nav>
         </div>
       )}
