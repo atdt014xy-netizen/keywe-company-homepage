@@ -27,6 +27,13 @@ export const siteConfig = {
   email: "atdt014xy@gmail.com",
   privacyOfficerName: "류수인",
   siteUrl: "https://keywe-company.vercel.app",
+  /**
+   * KakaoTalk open-chat link for the floating chat button (e.g.
+   * "https://open.kakao.com/o/xxxxxxx"). Create one from the KakaoTalk
+   * app: 채팅 탭 → + → 오픈채팅 → 1:1 오픈채팅. Leave empty to hide the
+   * button — it does not render without a real link.
+   */
+  kakaoChatUrl: "https://open.kakao.com/o/sQANTAIi",
   hours: {
     online: "홈페이지 상담 신청: 24시간 접수",
     phone: "전화 상담: 평일 09:00~18:00",

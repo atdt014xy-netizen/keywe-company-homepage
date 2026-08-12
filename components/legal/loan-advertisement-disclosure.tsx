@@ -10,15 +10,18 @@ const disclosure = {
   businessName: siteConfig.legalName,
   brokerageRegistrationNumber: siteConfig.brokerageRegistrationNumber,
   advertisingPhone: siteConfig.phone,
-  interestRateText: "확인 후 입력 — 제휴 대부업체 상품별 이자율은 상담 시 안내됩니다.",
-  overdueRateText: "확인 후 입력 — 연체이자율은 제휴 대부업체 상품 조건에 따라 다릅니다.",
-  extraCostText: "확인 후 입력 — 중도상환수수료 등 부대비용은 제휴 대부업체 상품 조건에 따라 다릅니다.",
-  earlyRepaymentText: "확인 후 입력 — 중도상환 조건은 계약하는 제휴 대부업체를 통해 안내됩니다.",
-  debtWarningText: "과도한 빚, 고통의 시작입니다.",
+  interestRateText:
+    "연 20% 이내 (2021년 7월 7일 이후 체결·갱신·연장되는 계약에 한함)",
+  overdueRateText: "연 20% 이내",
+  extraCostText: "취급수수료 없음 · 중개수수료 없음",
+  earlyRepaymentText: "중도상환수수료 없음",
+  repaymentPeriodText: "12~60개월",
+  loanExampleText:
+    "100만원을 12개월, 최대금리 연 20%, 원리금균등상환 방법으로 이용하는 경우 총 상환금액 1,111,614원. 대출상품 및 상환방법 등 대출계약 조건에 따라 달라질 수 있습니다.",
+  debtWarningText: "과도한 빚은 당신에게 큰 불행을 안겨줄 수 있습니다.",
   creditScoreWarningText:
-    "과도한 채무는 개인신용평점 하락 등 불이익의 원인이 될 수 있습니다.",
-  brokerageFeeWarningText:
-    "본 업체는 고객에게 중개의 대가로 수수료를 요구하지 않습니다.",
+    "대출 시 신용등급 또는 개인신용평점 하락으로 다른 금융거래가 제약받을 수 있습니다.",
+  brokerageFeeWarningText: "중개수수료를 요구하거나 받는 것은 불법입니다.",
 } as const;
 
 export function LoanAdvertisementDisclosure() {
@@ -50,11 +53,19 @@ export function LoanAdvertisementDisclosure() {
             <dt className="shrink-0 font-medium text-foreground/70">중도상환</dt>
             <dd>{disclosure.earlyRepaymentText}</dd>
           </div>
+          <div className="flex gap-1.5">
+            <dt className="shrink-0 font-medium text-foreground/70">상환기간</dt>
+            <dd>{disclosure.repaymentPeriodText}</dd>
+          </div>
         </dl>
+        <p className="mt-3">
+          <span className="font-medium text-foreground/70">대출 예시</span>{" "}
+          {disclosure.loanExampleText}
+        </p>
         <p className="mt-3 space-y-0.5">
+          <span className="block">{disclosure.brokerageFeeWarningText}</span>
           <span className="block">{disclosure.debtWarningText}</span>
           <span className="block">{disclosure.creditScoreWarningText}</span>
-          <span className="block">{disclosure.brokerageFeeWarningText}</span>
         </p>
       </div>
     </section>

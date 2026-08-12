@@ -4,6 +4,7 @@ import "./globals.css";
 import { siteConfig } from "@/lib/site-config";
 import { ConsultModalProvider } from "@/components/consult-modal-provider";
 import { MobileCtaBar } from "@/components/mobile-cta-bar";
+import { KakaoChatButton } from "@/components/kakao-chat-button";
 
 const notoSansKr = Noto_Sans_KR({
   variable: "--font-sans",
@@ -53,6 +54,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col">
         <ConsultModalProvider>
           {children}
+          <KakaoChatButton />
           <MobileCtaBar />
         </ConsultModalProvider>
       </body>
