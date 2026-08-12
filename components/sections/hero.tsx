@@ -2,7 +2,6 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import OrbitingCirclesGlobe from "@/components/ui/orbiting-circles-02";
 import { BorderBeamPanel } from "@/components/ui/border-beam-panel";
 import { ConsultForm } from "@/components/sections/consult-form";
 
@@ -62,10 +61,6 @@ export function Hero() {
         <div id="consult">
           <ConsultForm />
         </div>
-      </div>
-
-      <div className="mx-auto max-w-[860px] px-5 pb-4">
-        <OrbitingCirclesGlobe />
       </div>
     </section>
   );
