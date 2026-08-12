@@ -4,8 +4,8 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 
 export const metadata: Metadata = {
-  title: "개인정보 처리방침 | Key We Company",
-  description: "Key We Company의 개인정보 수집·이용, 제3자 제공, 보유기간 및 이용자 권리에 관한 안내입니다.",
+  title: "개인정보 처리방침 | Key We 대부중개",
+  description: "Key We 대부중개의 개인정보 수집·이용, 제3자 제공, 보유기간 및 이용자 권리에 관한 안내입니다.",
 };
 
 export default function PrivacyPage() {
@@ -19,7 +19,7 @@ export default function PrivacyPage() {
             개인정보 수집·이용 및 제3자 제공 안내
           </h1>
           <p className="mt-5 leading-relaxed text-foreground/70">
-            Key We Company(이하 &ldquo;회사&rdquo;)는 대부중개업 등록업체로서,
+            Key We 대부중개(이하 &ldquo;회사&rdquo;)는 대부중개업 등록업체로서,
             고객님의 대출 상담 신청 접수를 위해 아래와 같이 개인정보를
             수집·이용하며, 고객님의 동의가 있는 경우에 한해 제휴 대부업체에
             정보를 제공합니다.
@@ -102,8 +102,9 @@ export default function PrivacyPage() {
                 4. 문의처
               </h2>
               <p className="mt-4 text-sm leading-relaxed text-foreground/75">
-                개인정보 관련 문의는 전화 1588-0000 또는 이메일
-                hello@keywe.co.kr 로 연락해 주시기 바랍니다.
+                개인정보 관련 문의는 전화 010-7741-5434 또는 이메일
+                atdt014xy@gmail.com 로 연락해 주시기 바랍니다. 급한 용무는
+                365일 언제든 연락 주세요.
               </p>
             </section>
           </div>

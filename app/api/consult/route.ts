@@ -61,7 +61,7 @@ export async function POST(request: Request) {
 
   try {
     const { error } = await resend.emails.send({
-      from: "Key We Company 상담신청 <onboarding@resend.dev>",
+      from: "Key We 대부중개 상담신청 <onboarding@resend.dev>",
       to: RECIPIENT,
       subject: `[무료 상담 신청] ${name} / ${phone}`,
       text: [

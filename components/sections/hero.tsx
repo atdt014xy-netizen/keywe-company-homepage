@@ -21,7 +21,7 @@ export function Hero() {
           <div className="absolute inset-0 overflow-hidden rounded-[12px]">
             <Image
               src="/images/hero.png"
-              alt="Key We Company 로고와 '신뢰를 바탕으로 한 맞춤 금융 상담' 문구, 도심 빌딩가에 위치한 사무실"
+              alt="Key We 대부중개 로고와 '신뢰를 바탕으로 한 맞춤 금융 상담' 문구, 도심 빌딩가에 위치한 사무실"
               fill
               priority
               className="object-cover"
@@ -52,7 +52,7 @@ export function Hero() {
         <div className="relative -mx-5 mt-8 aspect-[860/1499] w-auto overflow-hidden rounded-[8px] border border-border/60 shadow-lg shadow-primary/5 md:mx-auto md:w-full md:max-w-[860px] md:rounded-[18px]">
           <Image
             src="/images/hero2.png"
-            alt="Key We Company 알선 가능한 주요 대출 상품 8종, 상담 진행 절차, 안내 사항"
+            alt="Key We 대부중개 알선 가능한 주요 대출 상품 8종, 상담 진행 절차, 안내 사항"
             fill
             className="object-cover"
             sizes="(min-width: 672px) 672px, 100vw"

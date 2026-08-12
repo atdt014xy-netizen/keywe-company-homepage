@@ -27,7 +27,7 @@ export function About() {
 
         <div className="-mx-5 mt-6 rounded-xl border border-border/60 bg-card p-6 leading-relaxed text-foreground/70 shadow-sm sm:p-8 md:mx-0">
           <p>
-            Key We Company는 고객님의 상황을 먼저 이해하고, 그에 맞는 대출
+            Key We 대부중개는 고객님의 상황을 먼저 이해하고, 그에 맞는 대출
             방향을 함께 찾아가는 대출 상담·중개 전문 회사입니다. 단순히 한
             가지 상품을 권하기보다 소득, 신용상태, 보유자산, 자금의 목적과
             상환 계획 등을 종합적으로 살펴 고객님께 적합한 금융상품을

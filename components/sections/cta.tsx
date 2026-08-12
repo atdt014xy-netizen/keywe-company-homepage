@@ -22,17 +22,18 @@ export function Cta() {
           </h2>
           <p className="max-w-lg text-white/85">
             상담은 무료이며, 고객님께 별도의 중개수수료를 요구하지 않습니다.
+            급한 용무는 365일 언제든 연락 주세요.
           </p>
 
           <a
-            href="tel:1588-0000"
+            href="tel:010-7741-5434"
             className={cn(
               buttonVariants({ size: "lg" }),
               "mt-2 gap-1.5 bg-white px-6 text-primary hover:bg-white/90"
             )}
           >
             <Phone className="size-4" />
-            1588-0000 전화 상담
+            010-7741-5434 전화 상담
           </a>
         </div>
       </div>

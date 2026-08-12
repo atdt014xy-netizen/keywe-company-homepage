@@ -21,8 +21,8 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-[860px] items-center justify-between px-5">
         <Link href="#top" className="flex items-center gap-2">
-          <Image src="/icon.png" alt="Key We Company" width={32} height={32} className="rounded-full" />
-          <span className="font-heading text-lg font-bold text-primary">Key We Company</span>
+          <Image src="/icon.png" alt="Key We 대부중개" width={32} height={32} className="rounded-full" />
+          <span className="font-heading text-lg font-bold text-primary">Key We 대부중개</span>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">

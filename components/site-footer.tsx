@@ -16,9 +16,9 @@ export function SiteFooter() {
         <div className="flex flex-col items-start justify-between gap-8 sm:flex-row">
           <div>
             <div className="flex items-center gap-2">
-              <Image src="/icon.png" alt="Key We Company" width={28} height={28} className="rounded-full" />
+              <Image src="/icon.png" alt="Key We 대부중개" width={28} height={28} className="rounded-full" />
               <span className="font-heading text-base font-bold text-primary">
-                Key We Company
+                Key We 대부중개
               </span>
             </div>
             <p className="mt-3 max-w-xs text-sm leading-relaxed text-foreground/60">
@@ -28,14 +28,22 @@ export function SiteFooter() {
           </div>
 
           <div className="text-sm leading-relaxed text-foreground/60">
-            <p>서울특별시 강남구 테헤란로 000, 0층</p>
-            <p>전화 1588-0000 · 이메일 hello@keywe.co.kr</p>
+            <p>부산광역시 중구 남포동1가 21-6</p>
+            <p>전화 010-7741-5434 · 이메일 atdt014xy@gmail.com</p>
             <p>평일 09:00 – 18:00 (주말·공휴일 휴무)</p>
+            <p className="mt-1 font-medium text-primary">
+              급한 용무는 365일 언제든 연락 주세요.
+            </p>
           </div>
         </div>
 
-        <div className="mt-8 border-t border-border/60 pt-6 text-xs text-foreground/45">
-          © {new Date().getFullYear()} Key We Company. All rights reserved.
+        <div className="mt-8 border-t border-border/60 pt-6 text-xs text-foreground/60">
+          <p className="font-bold text-foreground/80">
+            사업자등록번호 753-05-03649 · 대부중개업 등록번호 2025-부산동구-03010
+          </p>
+          <p className="mt-2 text-foreground/45">
+            © {new Date().getFullYear()} Key We 대부중개. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
