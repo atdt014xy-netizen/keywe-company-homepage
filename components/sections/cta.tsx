@@ -1,7 +1,8 @@
 import Image from "next/image";
-import { Phone, Mail, ArrowRight } from "lucide-react";
+import { Phone } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { ConsultForm } from "@/components/sections/consult-form";
 
 export function Cta() {
   return (
@@ -24,31 +25,20 @@ export function Cta() {
             상담은 무료이며, 고객님께 별도의 중개수수료를 요구하지 않습니다.
           </p>
 
-          <div className="mt-2 flex flex-wrap items-center justify-center gap-3">
-            <a
-              href="tel:1588-0000"
-              className={cn(
-                buttonVariants({ size: "lg" }),
-                "gap-1.5 bg-white px-6 text-primary hover:bg-white/90"
-              )}
-            >
-              <Phone className="size-4" />
-              1588-0000 전화 상담
-            </a>
-            <a
-              href="mailto:hello@keywe.co.kr"
-              className={cn(
-                buttonVariants({ variant: "outline", size: "lg" }),
-                "gap-1.5 border-white/50 bg-white/10 px-6 text-white hover:bg-white/20"
-              )}
-            >
-              <Mail className="size-4" />
-              이메일로 상담 신청
-              <ArrowRight className="size-4" />
-            </a>
-          </div>
+          <a
+            href="tel:1588-0000"
+            className={cn(
+              buttonVariants({ size: "lg" }),
+              "mt-2 gap-1.5 bg-white px-6 text-primary hover:bg-white/90"
+            )}
+          >
+            <Phone className="size-4" />
+            1588-0000 전화 상담
+          </a>
         </div>
       </div>
+
+      <ConsultForm />
     </section>
   );
 }
