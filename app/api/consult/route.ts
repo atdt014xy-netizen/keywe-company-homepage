@@ -1,7 +1,10 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const RECIPIENT = "sejongbiz@naver.com";
+// TODO: switch back to sejongbiz@naver.com once a custom domain is verified
+// in Resend (resend.com/domains) — until then, Resend's sandbox only allows
+// sending to the account's own verified address.
+const RECIPIENT = "atdt014xy@gmail.com";
 const PHONE_PATTERN = /^[0-9-+ ]{9,15}$/;
 
 export async function POST(request: Request) {
