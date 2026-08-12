@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export function SiteFooter() {
   return (
@@ -43,9 +44,14 @@ export function SiteFooter() {
           <p className="font-bold text-foreground/80">
             사업자등록번호 753-05-03649 · 대부중개업 등록번호 2025-부산동구-03010
           </p>
-          <p className="mt-2 text-foreground/45">
-            © {new Date().getFullYear()} Key We 대부중개. All rights reserved.
-          </p>
+          <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1">
+            <Link href="/privacy" className="font-semibold text-primary hover:underline">
+              개인정보처리방침
+            </Link>
+            <span className="text-foreground/45">
+              © {new Date().getFullYear()} Key We 대부중개. All rights reserved.
+            </span>
+          </div>
         </div>
       </div>
     </footer>
