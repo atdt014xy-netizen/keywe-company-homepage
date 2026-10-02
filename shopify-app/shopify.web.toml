@@ -1,0 +1,6 @@
+name = "StoreControl"
+roles = ["frontend", "backend"]
+webhooks_path = "/webhooks/events"
+
+[commands]
+dev = "npm exec react-router dev"

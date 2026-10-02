@@ -1,0 +1,13 @@
+{
+  "artifact": "mobile/build/app/outputs/flutter-apk/app-debug.apk",
+  "mode": "demo",
+  "build": "debug",
+  "bytes": 188688425,
+  "sha256": "DF3445DEC7A48647E058CCE6BADAAD8C56527850E7E82DD6497A0902F53B3271",
+  "generatedAt": "2026-10-02T19:11:15.8246229+09:00",
+  "flutter": "3.47.5",
+  "dart": "3.13.4",
+  "realDeviceVerified": false,
+  "shopifyEndToEndVerified": false,
+  "contentNote": "WARM ORANGE, KEYWE COMPANY, 5px 여백 및 요약 카드 목록 이동. 웹에는 필터 해제 버튼 접근성 수정도 반영."
+}

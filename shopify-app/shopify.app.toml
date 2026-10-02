@@ -1,0 +1,24 @@
+name = "StoreControl"
+client_id = ""
+application_url = "https://your-development-tunnel.example"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+
+[access_scopes]
+scopes = "read_products,read_inventory,read_locations"
+
+[auth]
+redirect_urls = ["https://your-development-tunnel.example/auth/callback"]
+
+[webhooks]
+api_version = "2026-07"
+
+[[webhooks.subscriptions]]
+topics = ["app/uninstalled", "app/scopes_update", "inventory_levels/update", "inventory_items/update", "products/update"]
+uri = "/webhooks/events"
+
+[[webhooks.subscriptions]]
+compliance_topics = ["customers/data_request", "customers/redact", "shop/redact"]
+uri = "/webhooks/compliance"
